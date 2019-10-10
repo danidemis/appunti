@@ -1,0 +1,24 @@
+PWD C:/Users/danid/Documents/GitHub/sBicocca/2 anno/Linguaggi e Computabilità
+INPUT f:/Programmi/texlive/2019/texmf.cnf
+INPUT f:/Programmi/texlive/2019/texmf-dist/web2c/texmf.cnf
+INPUT f:/Programmi/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT LC.tex
+OUTPUT LC.log
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/article.cls
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/article.cls
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT LC.aux
+INPUT LC.aux
+OUTPUT LC.aux
+INPUT LC.aux

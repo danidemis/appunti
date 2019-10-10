@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\title{Linguaggi di Programmazione}
+\author{Daniele De Micheli}
+\date{2019}
+
+\renewcommand*\contentsname{\textit{Indice}}
+
+%presettaggio per teoremi e assiomi/definizioni%
+
+\newtheorem*{nome}{teorema}
+\newtheorem*{isoscele}{Teorema del triangolo isoscele}
+
+
+%fine%
+
+\begin{document}
+
+maketitle
+tableofcontents
+
+\part{Introduzione alla logica}
+\section{Logica e Ragionamento}
+Per poter iniziare a parlare di \textit{linguaggi logici}, dobbiamo prima acquisire cosa è un \textit{linguaggio}.
+Dobbiamo quindi capire come un \color{red} ragionamento \color{black} può essere \color{red} formalizzato \color{black} in un numero di \color{red} passi \color{black} (connessi da \color{red} regole \color{black}) a partire da \color{red} premesse \color{black} per raggiungere una \color{red} conclusione \color{black}. 
+
+Questo processo è quello che siamo abituati a riscontrare nella soluzione di \textit{teoremi} tramite \textbf{dimostrazioni}.
+
+Un esempio di applicazione di questo processo possiamo vederlo qui di seguito: 
+
+\begin{isoscele}
+Dato un triangolo isoscele, ovvero con due lati $AB = BC$, si dimostra che gli angoli $\angle A$ e $\angle C$ sono uguali.
+\end{isoscele}
+
+\textit{\textbf{Conoscenze pregresse}}
+\begin{enumerate}
+	\item Se due triangoli sono uguali, i due triangoli hanno lati e angoli uguali.
+	\item Se due triangoli hanno due lati e l'angolo sotteso uguali, allora i due triangoli sono uguali.
+	\item BH bisettrice di $\angle B$ cioè $\angle ABH = \angle HBC$.
+\end{enumerate}
+
+\textit{\textbf{Dimostrazione}}
+\begin{itemize}
+	\item $AB = BC$ per ipotesi;
+	\item $\angle ABH = \angle HBC$ per (3);
+	\item Il triangolo $HBC$ è uguale al triangolo $ABH$ per (2);
+	\item $\angle A \medspace e \medspace \angle C$ per (1); 
+\end{itemize}
+Quindi abbiamo trasformato (2) in "\textbf{Se} $AB = BC$ e $BH = BH$ e $\angle ABH = \angle HBC$, \textbf{allora} il triangolo $ABH $ è uguale al triangolo $HBC$" e abbiamo trasformato (1) in "\textbf{Se} triangolo $ABH$ è uguale al triangolo $HBC$, \textbf{allora} $AB = BC $ e $ BH = BH $ e $AH = HC $ e $\angle ABH = \angle HBC $ e $\angle AHB = \angle CHB$ e $\angle A = \angle C$".
+
+L'obiettivo diventa a questo punto formalizzare e razionalizzare il processo che permette di affermare $$ AB=BC\vdash\angle A = \angle C$$ dove $\vdash$ indica il simbolo di \color{red} \textit{derivazione logica} \color{black}, che comunemente significa "\textbf{consegue}", "\textbf{allora}", ecc.
+\\ \\
+\textit{\textbf{Formalizzazione}}
+\\ \\
+Abbiamo assunto che:
+\begin{itemize}
+\item $\textbf{P} = \{AB=BC, \angle ABH = \angle HBC, BH = HB\}$.
+\end{itemize}
+Avevamo inoltre delle conoscenze pregresse (vedi \textit{conoscenze pregresse} sopra riportate).
+Abbiamo quindi costruito una catena di \textbf{formule}:
+\\ \\
+\begin{tabular}{p{.6\textwidth}r}
+	P1: $AB=BC$ & da \textbf{P} \\
+	P2: $\angle ABH = \angle HBC$ & da \textbf{P} \\
+	P3: $BH = HB$ & da \textbf{P} \\
+	P4: $AB = BC \wedge BH = HB \wedge \angle ABH = \angle HBC$ & da P1, P2, P3 e \color{red} introduzione della congiunzione \color{black} \\
+\end{tabular}
+\end{document}

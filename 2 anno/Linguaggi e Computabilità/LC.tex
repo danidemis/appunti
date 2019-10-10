@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\begin{comment}
+\title{Linguaggi e Computabilità}
+\author{Daniele De Micheli}
+\date{2019}
+
+\renewcommand*\contentsname{\textit{Indice}}
+\end{comment}
+
+%presettaggio per teoremi e assiomi/definizioni%
+
+\newtheorem*{problemaDecisione}{Problema di Decisione}
+\newtheorem*{problemaMembership}{Problema di Membership}
+
+%fine%
+
+\begin{document}
+
+%\maketitle
+%\tableofcontents
+
+\subsection{Linguaggio} possiamo definire un \textit{linguaggio} $L \medspace su \medspace E$ un sottoinsieme di $E^{\star}$ tale che $L \subseteq E^{\star}$. Per esempio, preso $E = \{a,b,c\}$, un linguaggio L potrebbe essere $L_{1}=\{aa,cbc\}$. Un linguaggio può essere finito (vedi $L_ {1}$), oppure infiniti (es. $L_{2} = \{ w \in E^{\star} \thickspace | \thickspace w \medspace contiene \medspace lo \medspace stesso \medspace numero \medspace di \medspace a \medspace e \medspace c\}$).
+\\ \\
+Preso un linguaggio $L \subseteq E^{\star}$, possiamo affermare che:
+\begin{itemize}
+\item[1.] $ \emptyset \subseteq L$;
+\item[2.] $ \varepsilon \subseteq L $;
+\item[3.] $ E^{\star} \subseteq L$;
+\end{itemize}
+sono tutti linguaggi. La principale caratteristica di un linguaggio è che esso deve essere riconosciuto e interpretato da una macchina (o automa) ed essa deve anche essere in grado di generarlo tramite una \textbf{\textit{grammatica}}.
+\begin{problemaDecisione}
+Il problema di decisione si presenta nel momento in cui, dato un quesito, le possibili risposte sono sempre e sole "sì" o "no".
+\end{problemaDecisione}
+\begin{problemaMembership}
+Il problema di Memebership è legato al concetto di stringa (come input), di linguaggio e di appartenenza ad un determinato linguaggio. Data una stringa w in input, una determinata macchina deve essere in grado di dire se essa appartiene ad un linguaggio oppure no.
+\end{problemaMembership}
+
+\textbf{\textit{DEFINIZIONI}}
+Una \textbf{forma sentenziale} è una stringa di simboli terminali e non terminali: $\gamma \in (V \cup T)^{\star}$
+
+\subsection{Grammatica NON context-free}
+Il linguaggio di esempio (di tipo 2): $L = \{w \in \{a,b,c\}^{\star} | w = a^nb^nc^n, n\geq 1\}$
+è generato dalla seguente grammatica (NON context-free): $$ G=(\{S,X,B,C\}, \{a,b,c\}, P, S)$$
+e dove le regole di produzione sono:
+\begin{enumerate}
+	\item $S \rightarrow aSBC$
+	\item $S \rightarrow aBC$
+	\item $CB \rightarrow XB$
+	\item $XB \rightarrow XC$
+	\item $XC \rightarrow BC$
+	\item $aB \rightarrow ab$
+	\item $bB \rightarrow bb$
+	\item $bC \rightarrow bc$
+	\item $cC \rightarrow cc$
+\end{enumerate}
+Le grammatuche 3,4,5 possono essere "collassate" in $CB \rightarrow BC$
+Si può dimostrare , usando il Pumping Lemma per i CFL, che non è context-free.
+\\ \\
+Esempio di Derivazione:
+\\ \\
+Deriviamo la stringa abc (corrispondente a n = 1), indicando anche ad ogni passo la regola usata.
+$$ S (2)\rightarrow aBC (6)\rightarrow abC (8)\rightarrow abc$$
+Deriviamo la stringa aabbcc (corrispondente a n = 1), indicando anche ad ogni passo la regola usata.
+
+\begin{equation*}\label{stigeiz}\begin{split}
+S (1)\rightarrow aSBC (2)\rightarrow aaBCBC (3)\rightarrow aaBXBC (4) \rightarrow aaBXCC (5) \rightarrow \\&\\ \rightarrow aaBBCC (6)\rightarrow aabBCC (7)\rightarrow aabbCC (8)\rightarrow aabbcC (9)\rightarrow aabbcc
+\end{split}
+\end{equation*}
+
+In generale, per derivare $a^nb^nc^n$, per n $<$ 1:
+
+\begin{equation*}
+\begin{split}
+S(n-1 \medspace volte \rightarrow (1)) a^{n-1}S(BC)^{n-1}\rightarrow (2) a^n(BC)^n(n(n-1)/2 \medspace volte \medspace la \\&\\ sequenza \rightarrow (3), \rightarrow (4), \rightarrow (5))a^nB^nC^n....slide
+\end{split}
+\end{equation*}
+
+Esercizio: creo una CFG su $L = \{a^{n+m}xc^nyd^m, \medspace con n,m \geq 0\}$:
+
+
+
+
+
+\end{document}
