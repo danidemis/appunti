@@ -1,4 +1,18 @@
 \documentclass[11pt]{article}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\tikzset{
+  treenode/.style = {align=center, inner sep=0pt, text centered,
+    font=\sffamily},
+  arn_n/.style = {treenode, circle, blue, font=\sffamily\bfseries, draw=blue,
+    fill=white, text width=1.5em},% arbre rouge noir, noeud noir
+  arn_r/.style = {treenode, circle, red, draw=red, 
+    text width=1.5em, very thick},% arbre rouge noir, noeud rouge
+}
+
+
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{amssymb}
@@ -21,6 +35,11 @@
 
 \newtheorem*{problemaDecisione}{Problema di Decisione}
 \newtheorem*{problemaMembership}{Problema di Membership}
+\newtheorem*{relazioneNorm}{Prima relazione}
+\newtheorem*{relazioneStar}{Seconda relazione}
+\newtheorem*{alberoSintattico}{Albero Sintattico}
+
+
 
 %fine%
 
@@ -47,6 +66,9 @@ Il problema di Memebership è legato al concetto di stringa (come input), di lin
 
 \textbf{\textit{DEFINIZIONI}}
 Una \textbf{forma sentenziale} è una stringa di simboli terminali e non terminali: $\gamma \in (V \cup T)^{\star}$
+
+\paragraph{Concatenazione di linguaggi}: Dati due linguaggi $L_1, L_2 \subseteq E^{\star}$ allora $$L_1 \circ L_2 = \{ w | w = w_1 \circ w_2, w_1 \in L_1, w_2 \in L_2\} $$
+
 \subsection{Grammatica context-free -CFG-}
 Una grammatica context free è una grammatica che non prevede l'incrocio dei simboli terminali per cui è necessario utilizzare delle regole differenti. Un esempio di linguaggio context free è il seguente:
 \\ \\
@@ -54,9 +76,34 @@ Una grammatica context free è una grammatica che non prevede l'incrocio dei sim
 Abbiamo il l'alfabeto $E = \{0,1\}$ e il linguaggio costruito su esso $L_{pal} \subseteq E^{\star}$. Da questo alfabeto e con questo linguaggio possiamo costruire una stringa w palondroma come $$w = \{0110\}$$
 Essa può essere definita per induzione come segue:
 \begin{enumerate}
-\item Caso base: $\varepsilon , 0, 1 \in L_{pal}$
-\item Caso induttivo: se $w \in L_{pal}$, allora $0w0, 1w1, \varepsilon \in L_{pal}$
+\item Passo base: $\varepsilon , 0, 1 \in L_{pal}$
+\item Passo induttivo: se $w \in L_{pal}$, allora $0w0, 1w1, \varepsilon \in L_{pal}$
 \end{enumerate}
+Un esempio di regole del linguaggio possono essere:
+\begin{equation}
+\begin{split}
+\color{red}S \color{black} \rightarrow \color{blue}\varepsilon\color{black}\\&\\
+\color{red}S \color{black} \rightarrow \color{blue}0 \color{black}\\&\\
+\color{red}S \color{black} \rightarrow \color{blue}1 \color{black}\\&\\ 
+\color{red}S \color{black} \rightarrow \color{blue}0S0 \color{black}\\&\\
+\color{red}S \color{black} \rightarrow \color{blue}1S1\color{black}
+\end{split}
+\end{equation}
+in cui la \color{red} \textbf{testa} \color{black} può essere sostituita dal \color{blue} \textbf{corpo}\color{black}.
+\\ \\
+Queste regole possono essere applicate tramite le due \emph{relazioni}:
+\begin{enumerate}
+\item $\Rightarrow$
+\item $\Rightarrow^{\star}$
+\end{enumerate}
+La prima (1) possiamo definirla come segue:
+\begin{relazioneNorm}
+Sia $G=(V, T,P,S)$ una CFG e sia $\alpha A \beta$ tale che $\alpha,\beta \in (V\cup T)^{\star}$ e $A \in V$. Sia $A \rightarrow \gamma \in P$. Allora $\alpha A\beta \Rightarrow \alpha \gamma \beta$.
+\end{relazioneNorm}
+\begin{relazioneStar}
+Si ha che $\alpha \Rightarrow^{\star} \beta$, con $\alpha, \beta \in (V \cup T)^{\star}$, se e solo se $\exists \medspace \gamma_{1}, \gamma_{2}, ... ,\gamma_{n} \in (V\cup T)^{\star}$ tale che $\alpha \Rightarrow \gamma_{1} \Rightarrow \gamma_{2} \Rightarrow \gamma_{3} \Rightarrow ... \Rightarrow \gamma_{n} \Rightarrow \beta$ con $n \geq 1$.
+Se n = 1, allora $\alpha = \beta$ e vale $\alpha \Rightarrow^{\star} \beta$ cioè $\alpha \Rightarrow^{\star} \gamma$.
+\end{relazioneStar}
 \subsection{Grammatica NON context-free}
 Il linguaggio di esempio (di tipo 2): $L = \{w \in \{a,b,c\}^{\star} | w = a^nb^nc^n, n\geq 1\}$
 è generato dalla seguente grammatica (NON context-free): $$ G=(\{S,X,B,C\}, \{a,b,c\}, P, S)$$
@@ -97,7 +144,39 @@ S(n-1 \medspace volte \rightarrow (1)) a^{n-1}S(BC)^{n-1}\rightarrow (2) a^n(BC)
 Esercizio: creo una CFG su $L = \{a^{n+m}xc^nyd^m, \medspace con n,m \geq 0\}$:
 
 
+\section{Alberi Sintattici}
+Un albero sintattico è una rappresentazione grafica (ad albero) che mostra come una forma sentenziale o una stringa è stata ottenuta tramite le regole di derivazione.
+
+\begin{alberoSintattico}
+Data una CFG definita come $$G=(V,T,P,S)$$ l'albero sintattico è un albero tale che
+\begin{enumerate}
+	\item Ogni nodo interno è \textbf{etichettato} da una variabile;
+	\item Ogni foglia è etichettata da una variabile, oppure un simbolo terminale o ancora da $\varepsilon$. Se è etichettata con $\varepsilon$ allora è l'unico figlio riscontrato.
+	\item Se un nodo è etichettato con A (variabile) e i rispettivi figli sono etichettati da sinistra verso destra con $X_1,X_2,X_3,...,X_k$, allora $A \rightarrow X_1,X_2,X_3,...,X_k \in P$ (ovvero A è una produzione della grammatica).
+\end{enumerate}
+\end{alberoSintattico}
+
+Un esempio pratico di albero sintattico: data la CFG definita come
+\begin{equation}
+E \rightarrow I\medspace |\medspace E+ E\medspace |\medspace E*E\medspace |\medspace (E)\medspace \medspace e \medspace \medspace I \rightarrow a\medspace |\medspace b \medspace |\medspace Ia\medspace |\medspace I0\medspace |\medspace I1
+\end{equation}
 
 
+\begin{center}
+%%creazione dell'albero secondo la CFG data
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 2cm/#1,
+  level distance = 1.5cm}] 
+\node [arn_n] {E}
+    child{ node [arn_n] {E} 
+            child{ node [arn_r] {I}}            
+    }
+    child{ node [arn_r] {+}
+  	}
+  	child{	node[arn_r] {E}
+  	}
+; 
+\end{tikzpicture}
+\end{center}
+abbiamo che l'albero sintattico ottenuto è un albero \textbf{radicato} e \textbf{ordinato}. Si può notare che i \color{blue}nodi interni \color{black} rappresentano i passaggi per arrivare alle \color{red}foglie\color{black}. Difatti è possibile ricostruire il processo di derivazione: $$E \rightarrow E \medspace + \medspace E \rightarrow I \medspace + \medspace E$$
 
 \end{document}
