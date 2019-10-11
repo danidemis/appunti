@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  11 OCT 2019 19:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  11 OCT 2019 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -570,74 +570,98 @@ italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
 italian.ldf    on input line 46.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
 
 (f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
 
 
 (f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./LC.toc)
+\tf@toc=\write4
+\openout4 = `LC.toc'.
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
+5.
+
+(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 51--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
-
- []
-
-[1
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
+ [1
 
 {f:/Programmi/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 91--95
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 122--128
+Underfull \hbox (badness 10000) in paragraph at lines 90--93
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--128
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
-[3] [4] [5] (./LC.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--134
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 161--167
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--167
+
+ []
+
+[5] [6] [7] (./LC.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 14548 strings out of 493281
- 284385 string characters out of 6146515
- 331167 words of memory out of 5000000
- 18457 multiletter control sequences out of 15000+600000
- 11110 words of font info for 41 fonts, out of 8000000 for 9000
+ 14581 strings out of 493281
+ 284856 string characters out of 6146515
+ 331187 words of memory out of 5000000
+ 18482 multiletter control sequences out of 15000+600000
+ 12963 words of font info for 48 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  60i,15n,72p,787b,1190s stack positions out of 5000i,500n,10000p,200000b,80000s
-<f:/Programmi/texlive/2019/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbxti10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmss10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmssbx10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti10.pfb>
-Output written on LC.pdf (5 pages, 147503 bytes).
+<f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.p
+fb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti
+10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r17.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+s10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ssbx10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb>
+Output written on LC.pdf (7 pages, 177565 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

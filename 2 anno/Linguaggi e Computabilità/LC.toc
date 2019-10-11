@@ -1,3 +1,14 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {paragraph}{Linguaggo:}{1}% 
+\contentsline {part}{I\hspace {1em}Prima Parte}{1}% 
+\contentsline {section}{\numberline {1}Alfabeti e Linguaggi}{1}% 
+\contentsline {subsection}{\numberline {1.1}Stringhe}{2}% 
+\contentsline {subsection}{\numberline {1.2}Alfabeti}{2}% 
+\contentsline {paragraph}{Potenza di un alfabeto}{2}% 
+\contentsline {paragraph}{Chiusura di Kleene}{3}% 
+\contentsline {subsection}{\numberline {1.3}Linguaggio}{3}% 
+\contentsline {paragraph}{Concatenazione di linguaggi}{4}% 
+\contentsline {subsection}{\numberline {1.4}Grammatica context-free -CFG-}{4}% 
+\contentsline {paragraph}{Stringhe palindrome}{4}% 
+\contentsline {subsection}{\numberline {1.5}Grammatica NON context-free}{5}% 
+\contentsline {section}{\numberline {2}Alberi Sintattici}{6}% 

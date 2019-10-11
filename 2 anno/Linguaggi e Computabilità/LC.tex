@@ -23,13 +23,13 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 
-\begin{comment}
+
 \title{Linguaggi e Computabilità}
 \author{Daniele De Micheli}
 \date{2019}
 
 \renewcommand*\contentsname{\textit{Indice}}
-\end{comment}
+
 
 %presettaggio per teoremi e assiomi/definizioni%
 
@@ -45,8 +45,47 @@
 
 \begin{document}
 
-%\maketitle
-%\tableofcontents
+\maketitle
+\tableofcontents
+\part{Prima Parte}
+\section{Alfabeti e Linguaggi}
+Si definisce \textbf{alfabeto} un insieme finito e non vuoto di simboli. Ad esempio, l'alfabeto $\{A,B,C,...,Z\}$ potremmo definirlo come l'insieme delle lettere maiuscole dell'alfabeto italiano. Altri esempi intuitivi sono l'inseme delle cifre che compongono i numeri arabi $\{1,2,3,...9,0\}$ o l'insieme $\{0,1\}$ che rappresenta i numeri binari. Un alfabeto si indica con una lettera maiuscola
+greca:
+\begin{itemize}
+	\item $A=\{A,B,C,...,Z\}$;
+	\item $\Gamma = \{0,1\}$;
+\end{itemize}
+Si definisce invece una \textbf{stringa} un insieme vuoto, finito o infinito di simboli presi da un dato alfabeto. Una stringa vuota si indica con $\epsilon o \lambda$.
+\subsection{Stringhe}
+Una stringa, come abbiamo già visto, si rappresenta con una lettera greca
+maiuscola. Nel caso volessimo indicare invece la lunghezza di una stringa
+bisogna utilizzare la seguente notazione: $$|\Gamma | = x$$ dove $\Gamma$ rappresenta la stringa e x la sua lunghezza.
+\\ \\
+Le stringhe possono inoltre essere "manipolate", o meglio esse si possono \textit{concatenare} per ottenere una nuova stringa. Tale operazione si può indicare così: $\Gamma \circ A$ e si legge "$\Gamma \medspace concatenata \medspace ad \medspace A$". La concatenazione \textbf{non} è un'operazione commutativa. Infatti $$\Gamma \circ A \neq A \circ \Gamma$$
+
+Se prendiamo ad esempio $A = \{010\}$ e $\Gamma = \{11\}$, allora $A \circ \Gamma = \{01011\}$ mentre $\Gamma \circ A = \{11010\}$ che non sono assolutamente uguali come si può ben vedere.
+
+\subsection{Alfabeti}
+Gli alfabeti, come abbiamo già visto, sono insieme finiti di simboli. Su tali
+insiemi  è possibile definire delle operazioni che generano delle stringhe a
+partire dall'alfabeto stesso.
+
+\paragraph{Potenza di un alfabeto}: dato un alfabeto $E$, si definisce \textit{potenza di E} la stringa di lunghezza k contenente tutti gli elementi dell'alfabeto $E$.
+$$dato \medspace E, k \geq 0 \in \mathbb{Z}, \Rightarrow E^k = E\times E\times E\times E \times ... \times E, k \medspace volte$$
+
+Se $|E| = q$, allora $|E^k| = q^k$. Ad esempio, prendiamo l'alfabeto $E=\{0,1\}$. Allora:
+\begin{itemize}
+	\item $E^1 = \{0,1\}$
+	\item $E^2 = \{00,01,10,11\}$
+	\item $E^3 = \{000,001,010,011,100,101,110,111\}$
+\end{itemize}
+Come si può intuire dall'esempio qui sopra, il risultato della potenza di un alfabeto non è altro che l'insieme delle \textit{combinazioni} di numero k degli elementi dell'alfabeto.
+
+\paragraph{Chiusura di Kleene}: la chiusura di Kleene è un'operazione che riguarda
+le potenze di un alfabeto. Infatti tale operazione non è altro che l'unione di
+tutte le potenze di un alfabeto fino a k. Formalmente: $$E^{\star} = \cup E^k = E^0 \cup E^1 \cup E^2 ... \cup E^k, \medspace t.c. \medspace k\geq 0$$
+
+Un'operazione derivata da quest'ultima è la chiusura di Kleene ma senza l'elemento 0: $$E^{+}=E^{\star}\setminus E^0$$
 
 \subsection{Linguaggio} possiamo definire un \textit{linguaggio} $L \medspace su \medspace E$ un sottoinsieme di $E^{\star}$ tale che $L \subseteq E^{\star}$. Per esempio, preso $E = \{a,b,c\}$, un linguaggio L potrebbe essere $L_{1}=\{aa,cbc\}$. Un linguaggio può essere finito (vedi $L_ {1}$), oppure infiniti (es. $L_{2} = \{ w \in E^{\star} \thickspace | \thickspace w \medspace contiene \medspace lo \medspace stesso \medspace numero \medspace di \medspace a \medspace e \medspace c\}$).
 \\ \\
@@ -119,7 +158,7 @@ e dove le regole di produzione sono:
 	\item $bC \rightarrow bc$
 	\item $cC \rightarrow cc$
 \end{enumerate}
-Le grammatuche 3,4,5 possono essere "collassate" in $CB \rightarrow BC$
+Le grammatiche 3,4,5 possono essere "collassate" in $CB \rightarrow BC$
 Si può dimostrare , usando il Pumping Lemma per i CFL, che non è context-free.
 \\ \\
 Esempio di Derivazione:
