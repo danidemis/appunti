@@ -47,7 +47,16 @@ Il problema di Memebership è legato al concetto di stringa (come input), di lin
 
 \textbf{\textit{DEFINIZIONI}}
 Una \textbf{forma sentenziale} è una stringa di simboli terminali e non terminali: $\gamma \in (V \cup T)^{\star}$
-
+\subsection{Grammatica context-free -CFG-}
+Una grammatica context free è una grammatica che non prevede l'incrocio dei simboli terminali per cui è necessario utilizzare delle regole differenti. Un esempio di linguaggio context free è il seguente:
+\\ \\
+\paragraph{Stringhe palindrome}: le stringhe palindrome sono un esempio semplice di linguaggio che utilizza una grammatica context-free.
+Abbiamo il l'alfabeto $E = \{0,1\}$ e il linguaggio costruito su esso $L_{pal} \subseteq E^{\star}$. Da questo alfabeto e con questo linguaggio possiamo costruire una stringa w palondroma come $$w = \{0110\}$$
+Essa può essere definita per induzione come segue:
+\begin{enumerate}
+\item Caso base: $\varepsilon , 0, 1 \in L_{pal}$
+\item Caso induttivo: se $w \in L_{pal}$, allora $0w0, 1w1, \varepsilon \in L_{pal}$
+\end{enumerate}
 \subsection{Grammatica NON context-free}
 Il linguaggio di esempio (di tipo 2): $L = \{w \in \{a,b,c\}^{\star} | w = a^nb^nc^n, n\geq 1\}$
 è generato dalla seguente grammatica (NON context-free): $$ G=(\{S,X,B,C\}, \{a,b,c\}, P, S)$$
