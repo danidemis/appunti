@@ -18,7 +18,7 @@
 
 %presettaggio per teoremi e assiomi/definizioni%
 
-\newtheorem*{nome}{teorema}
+\newtheorem*{horn}{Clausole di Horn}
 \newtheorem*{isoscele}{Teorema del triangolo isoscele}
 
 
@@ -167,7 +167,28 @@ dove
 Consideriamo una \textit{wff} in CNF (\ref{eqz:CNF}). Per esempio:
 \begin{equation}
 \label{eqz:es1CNF}
-(p(x) \vee q(x,y) \vee \neq t(z)) \color{red}\wedge\color{black} (p(w) \vee \neq s(u) \vee \neq r(v))
+(p(x) \vee q(x,y) \vee \neg t(z)) \color{red}\wedge\color{black} (p(w) \vee \neg s(u) \vee \neg r(v))
 \end{equation}
-se scartiamo da 
+se scartiamo il simbolo di \color{red}congiunzione \color{black}  (\ref{eqz:es1CNF}), rimaniamo con solo le clausole disgiuntive
+\begin{enumerate}
+	\item $(p(x) \vee q(x,y) \vee \neg t(z))$
+	\item $(p(w) \vee \neg s(u) \vee \neg r(v))$
+\end{enumerate}
+Le clausole così ottenute sono anche riscrivibili come
+\begin{enumerate}
+	\item $t(z) \Rightarrow p(x) \vee q(x,y)$ 
+	\item $s(u) \wedge r(v) \Rightarrow p(w)$
+\end{enumerate}
+ovvero un insieme di formule in CNF è riscrivibile come un insieme (congiunzione) di implicazioni.
+
+\begin{horn}
+Le clausole che hanno al più un solo letterale positivo (con o senza letterali negativi) prendono il nome di \textbf{\emph{Clausole di Horn}}.
+\end{horn}
+Detto questo, abbiamo che:
+\begin{itemize}
+	\item Non tutte le fbf possono essere trasformate in un insieme di clausole di Horn.
+	\item \textit{I programmi Prolog sono collezioni di clausole di Horn}
+\end{itemize}
+
+ 
 \end{document}
