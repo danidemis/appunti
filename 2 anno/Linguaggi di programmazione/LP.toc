@@ -1,0 +1,15 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {part}{I\hspace {1em}Introduzione alla logica}{1}% 
+\contentsline {section}{\numberline {1}Logica e Ragionamento}{1}% 
+\contentsline {subsection}{\numberline {1.1}Processo di dimostrazione}{3}% 
+\contentsline {subsection}{\numberline {1.2}Regole di inferenza e calcoli logici}{3}% 
+\contentsline {section}{\numberline {2}Programmazione Logica}{4}% 
+\contentsline {subsection}{\numberline {2.1}Stile dichiarativo della programmazione logica}{4}% 
+\contentsline {subsection}{\numberline {2.2}PROLOG}{5}% 
+\contentsline {paragraph}{Formule ben formate}{5}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Forma Normale Congiuntiva}{5}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Struttura del Prolog}{6}% 
+\contentsline {subsubsection}{\numberline {2.2.3}Sintassi del Prolog}{7}% 
+\contentsline {paragraph}{Termini}{7}% 
+\contentsline {subparagraph}{{\fontencoding {U}\fontfamily {futs}\selectfont \char 66} {\fontencoding {U}\fontfamily {futs}\selectfont \char 66} {\fontencoding {U}\fontfamily {futs}\selectfont \char 66}}{8}% 

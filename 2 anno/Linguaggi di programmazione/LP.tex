@@ -8,6 +8,7 @@
 \usepackage{amsthm}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{fourier} %per il simbolo di Attenzione!
 \usepackage{multirow} % Required for multirows
 
 \title{Linguaggi di Programmazione}
@@ -18,7 +19,7 @@
 
 %presettaggio per teoremi e assiomi/definizioni%
 
-\newtheorem*{horn}{Clausole di Horn}
+\newtheorem{horn}{Clausole di Horn}
 \newtheorem*{isoscele}{Teorema del triangolo isoscele}
 
 
@@ -26,8 +27,8 @@
 
 \begin{document}
 
-maketitle
-tableofcontents
+\maketitle
+\tableofcontents
 
 \part{Introduzione alla logica}
 \section{Logica e Ragionamento}
@@ -68,7 +69,7 @@ Abbiamo assunto che:
 \end{itemize}
 Avevamo inoltre delle conoscenze pregresse (vedi \textit{conoscenze pregresse} sopra riportate).
 Abbiamo quindi costruito una catena di \textbf{formule}:
-\begin{table}[h]
+\begin{table}[ht]
   \begin{center}
     \caption{Triangolo Isoscele.}
     \label{tab:isoscele}
@@ -137,13 +138,15 @@ Lo stile della programmazione logica ha delle precise caratteristiche:
  	\item[$\circ$] Il processo di risoluzione prevede la costruzione di una dimostrazione logica di un'affermazione (\textbf{goal}).
  	\item[$\circ$] Possiede una \color{red}base formale\color{black}:
  	\begin{itemize}
- 		\item[--] Calcolo dei predicati del primo ordine (vedi sez. ????) ma con limitazione nel tipo di formule (\textbf{\emph{clausole di Horn}})
+ 		\item[--] Calcolo dei predicati del primo ordine (vedi sez. ????) ma con limitazione nel tipo di formule (\textbf{\emph{clausole di Horn}} (\ref{thm:horn}))
  		\item[--] Utilizzo di particolari tecniche per la dimostrazione di teoremi (meccanismo di \textbf{\emph{Risoluzione}})
  	\end{itemize}
 \end{itemize}
 
 \subsection{PROLOG}
 Il Prolog (acronimo di \textbf{PRO}gramming in \textbf{LOG}ic) fu ideato e realizzato nel 1973 da Robert Kowalski (aspetto teorico) e Marten Van Emdem (dimostrazione sperimentale) . Esso si basa su una restrizione della \textit{logica del primo ordine}. Come caratteristica base dei linguaggi logici, anche Prolog utilizza uno stile dichiarativo di programmazione. La sua primaria funzione è quella di determinare se una certa affermazione è vera oppure no e, se è vera, quali vincoli sui valori attribuiti alle variabili hanno generato la risposta.
+
+
 \paragraph{Formule ben formate} Le formule ben formate (\textit{fbf}, o \textbf{well-formed formula}, \textit{wff}) di un linguaggio logico del primo ordine può essere riscritta in \color{red}forma normale a clausole\color{black}.
 
 Vi sono due forme normali a clausole:
@@ -160,14 +163,14 @@ Vi sono due forme normali a clausole:
 \end{itemize}
 dove 
 \begin{equation*}
-	L_{ij} \equiv P_{ij} (x,y,...,z) \circ L_{ij} \equiv \neq Q_{ij}(x,y,...,z)
+	L_{ij} \equiv P_{ij} (x,y,...,z) \circ L_{ij} \equiv \neg Q_{ij}(x,y,...,z)
 \end{equation*}
 
 \subsubsection{Forma Normale Congiuntiva}
 Consideriamo una \textit{wff} in CNF (\ref{eqz:CNF}). Per esempio:
 \begin{equation}
 \label{eqz:es1CNF}
-(p(x) \vee q(x,y) \vee \neg t(z)) \color{red}\wedge\color{black} (p(w) \vee \neg s(u) \vee \neg r(v))
+\underbrace{(p(x) \vee q(x,y) \vee \neg t(z))}_{clausola \medspace 1} \color{red}\wedge\color{black} \underbrace{(p(w) \vee \neg s(u) \vee \neg r(v)}_{clausola \medspace 2})
 \end{equation}
 se scartiamo il simbolo di \color{red}congiunzione \color{black}  (\ref{eqz:es1CNF}), rimaniamo con solo le clausole disgiuntive
 \begin{enumerate}
@@ -182,6 +185,7 @@ Le clausole così ottenute sono anche riscrivibili come
 ovvero un insieme di formule in CNF è riscrivibile come un insieme (congiunzione) di implicazioni.
 
 \begin{horn}
+\label{thm:horn}
 Le clausole che hanno al più un solo letterale positivo (con o senza letterali negativi) prendono il nome di \textbf{\emph{Clausole di Horn}}.
 \end{horn}
 Detto questo, abbiamo che:
@@ -190,5 +194,80 @@ Detto questo, abbiamo che:
 	\item \textit{I programmi Prolog sono collezioni di clausole di Horn}
 \end{itemize}
 
- 
+\subsubsection{Struttura del Prolog}
+Il linguaggio Prolog:
+\begin{itemize}
+	\item[$\circ$]Non contiene (quasi) istruzioni
+	\item[$\circ$]Contiene solo fatti e regole (clausole di Horn):
+	\begin{itemize}
+		\item \textbf{Fatti}: asserzioni vere nel contesto che stiamo descrivendo.
+		\item \textbf{Regole}: ci danno gli strumenti per dedurre nuovi fatti da quelli esistenti.
+	\end{itemize}
+	\item[$\circ$]Un programma Prolog ci dà informazioni su un sistema ed è normalmente chiamato \color{red}base di conoscenza \color{black}(\color{red}knowledge base\color{black})
+	\item[$\circ$]Un programma Prolog non si "esegue" ma si \textit{"interroga"} (\textbf{queried}): al programma si chiede se i fatti sono veri; esso risponderà son un \color{blue}True \color{black} o \color{blue}False \color{black} alla domanda.
+\end{itemize}
+
+\subsubsection{Sintassi del Prolog}
+Un programma Prolog è costituito da un insieme di clausole della forma
+
+
+\begin{table}[ht] %ht indica di creare la tabella dove la metti, sempre che sia possibile.
+	\begin{center}
+	\caption{Sintassi Prolog}
+	\label{sintassiProlog}
+	\begin{tabular}{l|l}
+
+	$a.$ & \color{red}FATTO / ASSERZIONE\color{black} \\
+	\hline
+	$c :- \medspace b_1 , b_2 , _ , b_n . $ & \color{red}REGOLA\color{black} \\
+	\\ \\
+
+	$:- \medspace q_1 , q_2 , ... , q_m $ & \color{red}GOAL\color{black} \\
+	\hline
+	$?-\medspace q_1 , q_2 , ... , q_m $ & \color{red}QUERY\color{black} \\
+	
+	
+	\end{tabular}
+	\end{center}
+\end{table}
+In cui $a, b_i \medspace e \medspace  q_i $ sono \emph{\textbf{termini}} (compositi). 
+Da notare che in molte implementazioni il prompt Prolog è un operatore che chiede al sistema di valutare il \textbf{goal}, in questo caso una congiunzione di termini. 
+\paragraph{Termini} Le espressioni nel Prolog sono chiamate \color{red}\textbf{termini}\color{black}. Esistono diversi tipi di termini:
+\begin{itemize}
+	\item[$\circ$]ATOMI :
+	\begin{itemize}
+	
+	\item Una sequenza di caratteri alfanumerici, che inizia con un carattere minuscolo (può contenere il carattere $"_"$ underscore)
+	\item Qualsiasi cosa racchiusa tra apici singoli (' ')
+	\item Un numero
+	\item Una stringa (SWI Prolog)
+\end{itemize}
+	\item[$\circ$]VARIABILI:
+	\begin{itemize}
+	
+	\item Una variabile (logica) è una sequenza alfanumerica che inizia con un carattere \textbf{MAIUSCOLO} o con il carattere $\_$ (underscore)
+	\item Le variabili (notare il plurale) composte solo dal simbolo $\_$ sono chiamate \textbf{indifferenza} (\textit{don’t care o any}) o \textbf{anonime}
+	\item Le variabili vengono \textbf{istanziate} (legate a un valore) con il
+procedere del programma (nella dimostrazione del teorema)
+\end{itemize}
+	\item[$\circ$]Una composizione di termini $\Rightarrow$ TERMINE COMPOSTO (simbolo di \color{red}\textit{funtore} \color{black} più uno o due argomenti):
+	\begin{itemize}
+		\item[+] Un \textbf{funtore} (simbolo di funzione o di predicato definito come atomo)
+		\item[+] Una sequenza di termini racchiusi tra parentesi tonde e
+separati da virgole. Questi sono chiamati argomenti del funtore
+	\end{itemize}
+	
+\end{itemize}
+
+%\danger \leaders\vrule height 2.5pt depth -1.5pt \hfill \null
+%\\ \\
+\subparagraph{\danger \space \danger \space \danger}
+\textbf{\emph{Non ci deve mai essere uno spazio tra il funtore e la parentesi di
+sinistra}}; questo per via di caratteristiche molto sofisticate del
+sistema di parsing di Prolog (cfr., operatori)
+%\\ \\
+
+%\danger \leaders\vrule height 2.5pt depth -1.5pt \hfill \null
+
+
 \end{document}
