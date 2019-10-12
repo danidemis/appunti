@@ -8,6 +8,7 @@
 \usepackage{amsthm}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{multirow} % Required for multirows
 
 \title{Linguaggi di Programmazione}
 \author{Daniele De Micheli}
@@ -67,11 +68,106 @@ Abbiamo assunto che:
 \end{itemize}
 Avevamo inoltre delle conoscenze pregresse (vedi \textit{conoscenze pregresse} sopra riportate).
 Abbiamo quindi costruito una catena di \textbf{formule}:
+\begin{table}[h]
+  \begin{center}
+    \caption{Triangolo Isoscele.}
+    \label{tab:isoscele}
+    \begin{tabular}{l|l}
+      \textbf{Formule} & \textbf{Origine} \\
+      \hline
+      \multirow{2}{*}{P1:$AB=BC$} 	& da \textbf{P} \\ % <-- Combining 2 rows with arbitrary with (*) and content 12
+      								& 10.1 \\ % <-- Content of first column omitted.
+      \hline
+      P2: $\angle ABH = \angle HBC$  & da \textbf{P} \\
+      \hline
+      P3: $BH = HB$ &  da \textbf{P}  \\
+      \hline
+      \multirow{2}{*}{P4:$AB = BC \wedge BH = HB \wedge \angle ABH = \angle HBC$ } 	& da \textbf{P1}, \textbf{P2}, \textbf{P3} e \\ % <-- Combining 2 rows with arbitrary with (*) and content 12
+      																				& \color{red} introduzione della congiunzione \color{black} \\
+      \hline
+      P5: $\bigtriangleup ABH = \bigtriangleup HBC$ & da \textbf{P4}, $regola_{1}$ e \color{red} Modus Ponens \color{black} \\ 
+      \hline
+      P6:$AB = BC \bigwedge BH = BH \bigwedge AH =HC $ \\ $\medspace \medspace \bigwedge \angle ABH = \angle HBC \bigwedge \angle AHB = \angle CHB \bigwedge $ \\ $\medspace \medspace  \angle A = \angle C$	& da \textbf{P5}, $regola_2$  e \color{red} Modus Ponens \color{black}  \\
+      \hline
+      \multirow{2}{*}{P7: $\angle A = \angle C$} & da \textbf{P6} e l'\color{red}eliminazione della \\ &\color{red} congiunzione\color{black} (il simbolo $\bigwedge$)
+    \end{tabular}
+  \end{center}
+\end{table}\textbf{•}
 \\ \\
-\begin{tabular}{p{.6\textwidth}r}
-	P1: $AB=BC$ & da \textbf{P} \\
-	P2: $\angle ABH = \angle HBC$ & da \textbf{P} \\
-	P3: $BH = HB$ & da \textbf{P} \\
-	P4: $AB = BC \wedge BH = HB \wedge \angle ABH = \angle HBC$ & da P1, P2, P3 e \color{red} introduzione della congiunzione \color{black} \\
-\end{tabular}
+Le parti evidenziate in rosso nella tabella \ref{tab:isoscele} sono le \emph{regole di inferenza}.
+
+\subsection{Processo di dimostrazione}
+Una "prova" D, dove \color{red}\textbf{S} \color{black} è l'insieme delle \textit{"affermazioni note"} e \textbf{F} la frase (es. la formula) che vogliamo provare.
+\begin{equation*}
+D\equiv \color{red}\textbf{S}\color{black} \vdash F
+\end{equation*} 
+(che si legge: \textbf{F} è una conseguenza di \color{red}\textbf{S}\color{black}) è una sequenza di passi $$D = < P_1, P_2, ... , P_n >$$ dove 
+
+$$P_n = F$$  
+$$P_i \in S \cup \{P_j \medspace | \medspace j < i\}$$
+o $P_i$ può essere ottenuto da $P_{i1},...,P_{im}$ (con $i1 < i, ... , im < i$)mediante l'applicazione di una regola di inferenza.
+
+\subsection{Regole di inferenza e calcoli logici}
+Un insieme di regole di inferenza costituisce la base di un calcolo logico. Diversi insieme di regole danno vita a diversi calcoli logici. Lo scopo di un calcolo logico è quello di manipolare delle formule logiche in modo completamente \textbf{sintattico} al fine di stabilire una
+connessione tra un insieme di formule di \textit{partenza} (di solito un
+insieme di formule dette \emph{assiomi}) ed un insieme di \textit{conclusioni}.
+
+\section{Programmazione Logica}
+La programmazione logica nasce all'inizio degli anni settanta da
+studi sulla deduzione automatica: il \textit{\textbf{Prolog}} costituisce uno dei
+sui risultati principali. Essa non è soltanto rappresentata dal Prolog; costituisce infatti un settore molto ricco che cerca
+di utilizzare la logica matematica come base dei linguaggi di
+programmazione.
+\\ \\ 
+Gli obiettivi del linguaggio di programmazione logica sono:
+\begin{itemize}
+	\item semplicità del formalismo;
+	\item linguaggio ad alto livello;
+	\item semantica chiara;
+\end{itemize}
+Questo tipo di linguaggio si focalizza sulle solide basi della \textit{logica matematica}. Con l'avvento dell'informatica difatti si è sempre più utilizzata la logica matematica per dimostrare teoremi tramite i calcolatori (che permettono di ottenere risultati in minor tempo e con meno errori). Tra le procedure utilizzate si ricordano la \textit{procedura di Davis e Putnam} e il \textit{principio di risoluzione}. 
+
+Per rendere bene l'idea, la programmazione logica viene utilizzata per verificare la correttezza di altri software, per rappresentare la conoscenza di Intelligenza Artificiale o ancora per il formalismo nei database (come Datalog).
+
+\subsection{Stile dichiarativo della programmazione logica}
+Lo stile della programmazione logica ha delle precise caratteristiche:
+\begin{itemize}
+ 	\item[$\circ$] Un programma è un \textit{insieme di formule}.
+ 	\item[$\circ$] Possiede un grande potere espressivo.
+ 	\item[$\circ$] Il processo di risoluzione prevede la costruzione di una dimostrazione logica di un'affermazione (\textbf{goal}).
+ 	\item[$\circ$] Possiede una \color{red}base formale\color{black}:
+ 	\begin{itemize}
+ 		\item[--] Calcolo dei predicati del primo ordine (vedi sez. ????) ma con limitazione nel tipo di formule (\textbf{\emph{clausole di Horn}})
+ 		\item[--] Utilizzo di particolari tecniche per la dimostrazione di teoremi (meccanismo di \textbf{\emph{Risoluzione}})
+ 	\end{itemize}
+\end{itemize}
+
+\subsection{PROLOG}
+Il Prolog (acronimo di \textbf{PRO}gramming in \textbf{LOG}ic) fu ideato e realizzato nel 1973 da Robert Kowalski (aspetto teorico) e Marten Van Emdem (dimostrazione sperimentale) . Esso si basa su una restrizione della \textit{logica del primo ordine}. Come caratteristica base dei linguaggi logici, anche Prolog utilizza uno stile dichiarativo di programmazione. La sua primaria funzione è quella di determinare se una certa affermazione è vera oppure no e, se è vera, quali vincoli sui valori attribuiti alle variabili hanno generato la risposta.
+\paragraph{Formule ben formate} Le formule ben formate (\textit{fbf}, o \textbf{well-formed formula}, \textit{wff}) di un linguaggio logico del primo ordine può essere riscritta in \color{red}forma normale a clausole\color{black}.
+
+Vi sono due forme normali a clausole:
+\begin{itemize}
+	\item[$\circ$]\color{blue}Forma normale congiunta\color{black} (conjunctive normal form - CNF): la formula è una \textbf{congiunzione} di \textbf{disgiunzioni} di predicati o di negazioni di predicati (letterali \textit{positivi} o letterali \textit{negativi}).
+	\begin{equation}
+	\label{eqz:CNF}
+	\bigwedge_i \bigg( \bigvee_j L_{ji} \bigg) 
+	\end{equation}
+	\item[$\circ$]\color{blue}Forma normale disgiunta\color{black} (disjunctive normal form - DNF): la formula è una \textbf{disgiunzione} di \textbf{congiunzioni} di predicati o di negazione di predicati (letterali \textit{positivi} o letterali \textit{negativi}).
+	\begin{equation}
+	\bigvee_j \bigg( \bigwedge_i L_{ji} \bigg) 
+	\end{equation}
+\end{itemize}
+dove 
+\begin{equation*}
+	L_{ij} \equiv P_{ij} (x,y,...,z) \circ L_{ij} \equiv \neq Q_{ij}(x,y,...,z)
+\end{equation*}
+
+\subsubsection{Forma Normale Congiuntiva}
+Consideriamo una \textit{wff} in CNF (\ref{eqz:CNF}). Per esempio:
+\begin{equation}
+\label{eqz:es1CNF}
+(p(x) \vee q(x,y) \vee \neq t(z)) \color{red}\wedge\color{black} (p(w) \vee \neq s(u) \vee \neq r(v))
+\end{equation}
+se scartiamo da 
 \end{document}
