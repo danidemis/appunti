@@ -7,6 +7,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{xcolor}
+\usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage{fourier} %per il simbolo di Attenzione!
 \usepackage{multirow} % Required for multirows
@@ -258,15 +259,86 @@ separati da virgole. Questi sono chiamati argomenti del funtore
 	\end{itemize}
 	
 \end{itemize}
-
 %\danger \leaders\vrule height 2.5pt depth -1.5pt \hfill \null
 %\\ \\
-\subparagraph{\danger \space \danger \space \danger}
+\danger\medspace\danger \hfill \danger\medspace\danger
+\\ \\
 \textbf{\emph{Non ci deve mai essere uno spazio tra il funtore e la parentesi di
 sinistra}}; questo per via di caratteristiche molto sofisticate del
 sistema di parsing di Prolog (cfr., operatori)
-%\\ \\
+\\ \\
+\danger\medspace\danger \hfill \danger\medspace\danger
+\\ \\
+\paragraph{Prolog: fatti e predicati}
 
+Un \textbf{fatto} (\textbf{predicato}) consiste in:
+\begin{itemize}
+	\item Un nome di predicato, ad esempio \textit{fattoriale}, \textit{genitore}, \textit{uomo} o \textit{animale}; deve iniziare con una lettera \color{red} minuscola\color{black}.
+	\item Zero o più argomenti come \textit{maria}, \textit{42} o \textit{cane}. Da tenere presente che i fatti (e le regole e le domande) \textbf{devono} essere terminati da un punto (".").
+\end{itemize}
+
+\paragraph{Le regole} In Prolog si usano le \textbf{regole} quando si vuole esprimere che un certo fatto dipende da un insieme di altri fatti. Per esprimere in linguaggio naturale questa dipendenza usiamo la parola "\color{blue}se\color{black}" ("if" in inglese).
+
+Ad esempio:
+\begin{itemize}
+	\item \textit{Uso l'ombrello \textbf{se} piove};
+	\item \textit{Luca mangia la pizza \textbf{se} non contiene glutine};
+\end{itemize}
+Le regole sono anche usate per esprimere definizioni. Ad esempio:
+\subparagraph{X è un pesce \textbf{se}:}
+\begin{itemize}
+	\item X è un animale
+	\item X ha le squame
+\end{itemize}
+Una regola è costituita da una \color{blue}\textbf{testa }\color{black} e da un \color{blue}\textbf{corpo}\color{black}. Sono inoltre caratterizzati come segue:
+\begin{enumerate}
+	\item Testa e corpo sono collegati dalloperatore "$:-$".
+	\item La testa di una regola corrisponde al \color{red}\textbf{conseguente} \color{black} di un'implicazione logica. 
+	\item Il corpo di una regola corrisponde all’\color{red}\textbf{antecendente} \color{black} di un’implicazione logica.
+	\item Le regole Prolog corrispondono alle \color{blue}\textbf{clausole di Horn} \color{black}, ovvero hanno un solo termine (predicato) come conseguente.
+	\begin{itemize}
+		\item[$\circ$] L'operatore Prolog '$:-$' esprime il "\textbf{se}" (\textit{implicazione}).
+		\item[$\circ$] L'operatore Prolog ',' equivale a "\textbf{e}" (\textbf{\textit{and}}, o \textit{congiunzione}).
+	\end{itemize}
+\end{enumerate}
+Un esempio di regola Prolog può essere:
+\\ \\
+\textit{"un pesce è un animale che ha le squame"} diventa:
+\begin{flalign}
+& pesce(X) \medspace :- \medspace animale(X), \medspace ha\_ le\_ squame(X). && \nonumber 
+\end{flalign}
+Una relazione può essere però definita per necessità da due regole (o clausole) aventi lo stesso predicato come conclusione. Per esempio:
+\begin{flalign*}
+&genitore(X, Y) \medspace :- \medspace padre(x, Y). && \\\nonumber
+&genitore(X, Y) \medspace :- \medspace madre(x, Y). &&
+\end{flalign*}
+Le regole (ed i fatti) sono implicitamente connesse dall'operatore logico di congiunzione ("\color{red}and\color{black}"); se non si sono commessi errori logici, \textbf{entrambe} le implicazioni soprastanti sono da ritenersi \textbf{vere}.
+\\ \\
+Una relazione può essere definita anche \emph{ricorsivamente}. In questo caso la definizione richiede almeno due proposizioni: una è quella ricorsiva che corrisponde al caso generale, l'altra esprime il caso base più semplice.
+
+\begin{flalign*}
+&antenato(X, Y) \medspace :- \medspace genitore(X,Y). &&\\\nonumber
+&antenato(X, Y) \medspace :- \medspace genitore(Z,Y), antenato(X, Z).&&
+\end{flalign*}
+
+\subparagraph{Operatori Logici}: gli operatori logici "and" e "or" possono essere utilizzati nelle regole tramite una specifica sintassi.
+L'operatore "\textbf{AND}" viene inserito in una regola con il carattere \textit{virgola} ',';
+L'operatore "\textbf{OR}" viene inserito in una regola con il carattere  \textit{punto e virgola} ';'.
+
+\subparagraph{RICAPITOLANDO} Bisogna ricordare che:
+\begin{enumerate}
+	\item ogni fatto o regola DEVE terminare con un punto '.'
+	\item ogni variabile DEVE iniziare con una MAIUSCOLA
+	\item i commenti si inseriscono dopo un "\%" (commento in linea) o tra '/*' e '*/' (come in altri linguaggi).
+\end{enumerate}
+
+\subsection{L'interprete Prolog: interrogazioni}
+Una volta che le regole e i fatti sono stati "caricati" nell'interprete, eseguire un programma Prolog equivale a \textit{interrogare} l'\textbf{interprete}. Una volta fatto partire, l'interprete Prolog ci presenta un prompt così:
+\begin{flalign*}
+& ?- &&\nonumber
+\end{flalign*}
+Come si può intuire anche dalla sintassi del prompt, interrogare l'interprete non è altro che porre una \textit{domanda} a cui generlamente il Prolog risponde "\textbf{true}" o "\textbf{false}".
+Le interrogazioni possono contenere variabili interpretate come \emph{\textbf{variabili esistenziali}}. Queste sono istanziate quando il Prolog prova a rispondere alla domanda fattagli. Tutte le variabili istanziate vengono mostrate nella risposta insieme a "true".
 %\danger \leaders\vrule height 2.5pt depth -1.5pt \hfill \null
 
 
