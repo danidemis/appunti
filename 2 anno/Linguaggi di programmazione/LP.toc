@@ -3,22 +3,22 @@
 \contentsline {part}{I\hspace {1em}Introduzione alla logica}{1}% 
 \contentsline {section}{\numberline {1}Logica e Ragionamento}{1}% 
 \contentsline {subsection}{\numberline {1.1}Processo di dimostrazione}{3}% 
-\contentsline {subsection}{\numberline {1.2}Regole di inferenza e calcoli logici}{3}% 
+\contentsline {subsection}{\numberline {1.2}Regole di inferenza e calcoli logici}{4}% 
 \contentsline {section}{\numberline {2}Programmazione Logica}{4}% 
 \contentsline {subsection}{\numberline {2.1}Stile dichiarativo della programmazione logica}{4}% 
 \contentsline {subsection}{\numberline {2.2}PROLOG}{5}% 
 \contentsline {paragraph}{Formule ben formate}{5}% 
-\contentsline {subsubsection}{\numberline {2.2.1}Forma Normale Congiuntiva}{5}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Forma Normale Congiuntiva}{6}% 
 \contentsline {subsubsection}{\numberline {2.2.2}Struttura del Prolog}{6}% 
 \contentsline {subsubsection}{\numberline {2.2.3}Sintassi del Prolog}{7}% 
 \contentsline {paragraph}{Termini}{7}% 
 \contentsline {paragraph}{Prolog: fatti e predicati}{8}% 
 \contentsline {paragraph}{Le regole}{8}% 
 \contentsline {subparagraph}{X è un pesce \textbf {se}:}{8}% 
-\contentsline {subparagraph}{Operatori Logici}{9}% 
+\contentsline {subparagraph}{Operatori Logici}{10}% 
 \contentsline {subparagraph}{RICAPITOLANDO}{10}% 
 \contentsline {subsection}{\numberline {2.3}L'interprete Prolog: interrogazioni}{10}% 
 \contentsline {subsubsection}{\numberline {2.3.1}L'interprete prolog: \textbf {consult}}{10}% 
-\contentsline {subsection}{\numberline {2.4}Unificazione}{10}% 
+\contentsline {subsection}{\numberline {2.4}Unificazione}{11}% 
 \contentsline {subsection}{\numberline {2.5}Liste in Prolog}{12}% 
 \contentsline {subsubsection}{\numberline {2.5.1}L'operatore | }{12}% 

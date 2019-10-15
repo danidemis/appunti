@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  15 OCT 2019 11:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  15 OCT 2019 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **LP.tex
 (./LP.tex
 LaTeX2e <2019-10-01>
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/article.cls
+(d:/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/size11.clo
+(d:/texlive/2019/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -22,40 +22,40 @@ File: size11.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+(d:/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
+(d:/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2019/09/27 3.34 The Babel package
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/babel/switch.def
+(d:/texlive/2019/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2019/09/27 3.34 Babel switching mechanism
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/babel-italian/italian.ldf
+(d:/texlive/2019/texmf-dist/tex/generic/babel-italian/italian.ldf
 Language: italian 2019/01/05 v.1.4.01 Italian support for the babel system
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/babel/babel.def
+(d:/texlive/2019/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2019/09/27 3.34 Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
+(d:/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count89
 )
 \it@lettering=\count90
 \it@doublequoteactive=\count91
 \it@ISOcompliance=\count92
 ))
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(d:/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count93
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks16
 \symAMSa=\mathgroup4
@@ -64,30 +64,30 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/tools/verbatim.sty
+(d:/texlive/2019/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks17
 \verbatim@line=\toks18
 \verbatim@in@stream=\read1
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2019/04/01 v2.17c AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
 \ex@=\dimen104
 ))
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen105
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count94
@@ -128,7 +128,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 LaTeX Info: Redefining \[ on input line 2855.
 LaTeX Info: Redefining \] on input line 2856.
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amscls/amsthm.sty
+(d:/texlive/2019/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks24
 \thm@bodyfont=\toks25
@@ -140,15 +140,15 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headsep=\skip48
 \dth@everypar=\toks29
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+(d:/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(d:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+(d:/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
@@ -161,20 +161,20 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+(d:/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks30
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+(d:/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/07/20 v1.3b Standard LaTeX Graphics (DPC,SPQR)
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+(d:/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(d:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
@@ -182,7 +182,7 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/fourier/fourier.sty
+(d:/texlive/2019/texmf-dist/tex/latex/fourier/fourier.sty
 Package: fourier 2005/01/01 1.4 fourier-GUTenberg package
 Now handling font encoding FML ...
 ... no UTF-8 mapping file for font encoding FML
@@ -191,14 +191,14 @@ Now handling font encoding FMS ...
 Now handling font encoding FMX ...
 ... no UTF-8 mapping file for font encoding FMX
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
+(d:/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
+(d:/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
+(d:/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -213,12 +213,12 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
+(d:/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
+(d:/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
 File: ts1enc.dfu 2019/07/11 v1.2j UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -357,7 +357,7 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/fourier/fourier-orns.sty
+(d:/texlive/2019/texmf-dist/tex/latex/fourier/fourier-orns.sty
 Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
 )
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
@@ -487,7 +487,7 @@ LaTeX Font Info:    Redeclaring math accent \dot on input line 255.
 LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
 \symUfutm=\mathgroup7
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
+(d:/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip49
 \multirow@cntb=\count106
@@ -495,8 +495,7 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \bigstrutjot=\dimen115
 )
 \c@horn=\count107
-
-(./LP.aux)
+ (./LP.aux)
 \openout1 = `LP.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -514,7 +513,8 @@ LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 28.
 LaTeX Font Info:    Trying to load font information for FML+futm on input line 
 28.
- (f:/Programmi/texlive/2019/texmf-dist/tex/latex/fourier/fmlfutm.fd
+
+(d:/texlive/2019/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
 LaTeX Font Info:    ... okay on input line 28.
@@ -522,7 +522,7 @@ LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 28.
 LaTeX Font Info:    Trying to load font information for FMS+futm on input line 
 28.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/fourier/fmsfutm.fd
+(d:/texlive/2019/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
 LaTeX Font Info:    ... okay on input line 28.
@@ -530,7 +530,7 @@ LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 28.
 LaTeX Font Info:    Trying to load font information for FMX+futm on input line 
 28.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/fourier/fmxfutm.fd
+(d:/texlive/2019/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
 LaTeX Font Info:    ... okay on input line 28.
@@ -538,20 +538,20 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
 8.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
+(d:/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Trying to load font information for T1+futs on input line 2
 8.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/fourier/t1futs.fd
+(d:/texlive/2019/texmf-dist/tex/latex/fourier/t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 LaTeX Info: Redefining \it@ocap on input line 28.
 LaTeX Info: Redefining \it@ccap on input line 28.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(d:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count108
 \scratchdimen=\dimen116
@@ -564,39 +564,39 @@ LaTeX Info: Redefining \it@ccap on input line 28.
 \MPnumerator=\count112
 \makeMPintoPDFobject=\count113
 \everyMPtoPDFconversion=\toks32
-) (f:/Programmi/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (d:/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+(d:/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(d:/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 ))))
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(d:/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -611,7 +611,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(d:/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -620,7 +620,7 @@ LaTeX Font Info:    Redeclaring math accent \widetilde on input line 28.
 LaTeX Font Info:    Trying to load font information for FML+futmi on input line
  30.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/fourier/fmlfutmi.fd
+(d:/texlive/2019/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -632,13 +632,13 @@ LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
 
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+(d:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
 
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+(d:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
@@ -672,16 +672,15 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 33.
+ [1
 
-[1
-
-{f:/Programmi/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{d:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/futs/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/futs/b/it' tried instead on input line 46.
 LaTeX Font Info:    Trying to load font information for TS1+futs on input line 
 55.
 
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/fourier/ts1futs.fd
+(d:/texlive/2019/texmf-dist/tex/latex/fourier/ts1futs.fd
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 )
 Overfull \hbox (29.18399pt too wide) in paragraph at lines 62--67
@@ -721,8 +720,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--124
 [4] [5] [6] [7]
 LaTeX Font Info:    Trying to load font information for U+futs on input line 26
 3.
-
-(f:/Programmi/texlive/2019/texmf-dist/tex/latex/fourier/ufuts.fd
+ (d:/texlive/2019/texmf-dist/tex/latex/fourier/ufuts.fd
 File: ufuts.fd 2004/03/26 Fontinst v1.926 font definitions for U/futs.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 263--271
@@ -770,34 +768,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 370--374
 
  []
 
-
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 387--392
 
  []
 
-[11] [12] (./LP.aux) ) 
+[12] [13] (./LP.aux) ) 
 Here is how much of TeX's memory you used:
  5359 strings out of 493281
- 68966 string characters out of 6146515
- 146738 words of memory out of 5000000
+ 67676 string characters out of 6149645
+ 149738 words of memory out of 5000000
  9405 multiletter control sequences out of 15000+600000
  98824 words of font info for 105 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  46i,12n,37p,787b,283s stack positions out of 5000i,500n,10000p,200000b,80000s
-{f:/Programmi/texlive/2019/texmf-dist/fonts/enc/dvips/bas
-e/8r.enc}<f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/fourier/fouri
-er-mex.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/fourier/fou
-rier-ms.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/fourier/fo
-urier-orns.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msam10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/ut
-opia/putb8a.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/
-putbi8a.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putr
-8a.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putri8a.p
-fb>
-Output written on LP.pdf (12 pages, 113672 bytes).
+{d:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<
+d:/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb><d:/texli
+ve/2019/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb><d:/texlive/2019/t
+exmf-dist/fonts/type1/public/fourier/fourier-orns.pfb><d:/texlive/2019/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2019/texmf-dist/f
+onts/type1/adobe/utopia/putb8a.pfb><d:/texlive/2019/texmf-dist/fonts/type1/adob
+e/utopia/putbi8a.pfb><d:/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putr8
+a.pfb><d:/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on LP.pdf (13 pages, 113980 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
