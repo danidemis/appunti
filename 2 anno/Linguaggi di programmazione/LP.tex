@@ -7,7 +7,6 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{xcolor}
-\usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage{fourier} %per il simbolo di Attenzione!
 \usepackage{multirow} % Required for multirows
@@ -339,7 +338,82 @@ Una volta che le regole e i fatti sono stati "caricati" nell'interprete, eseguir
 \end{flalign*}
 Come si può intuire anche dalla sintassi del prompt, interrogare l'interprete non è altro che porre una \textit{domanda} a cui generlamente il Prolog risponde "\textbf{true}" o "\textbf{false}".
 Le interrogazioni possono contenere variabili interpretate come \emph{\textbf{variabili esistenziali}}. Queste sono istanziate quando il Prolog prova a rispondere alla domanda fattagli. Tutte le variabili istanziate vengono mostrate nella risposta insieme a "true".
-%\danger \leaders\vrule height 2.5pt depth -1.5pt \hfill \null
+
+\subsubsection{L'interprete prolog: \textbf{consult}}
+Nel Prolog la base di conoscenza è \textit{nascosta} ed è accessibile solo tramite opportuni comandi o tramite ambiente di programmazione. Ovviamente è necessario poter \emph{inizializzare} o \emph{caricare} un insieme di fatti e regole nell'ambiente Prolog.
+Il comando principale che assolve questa funzione è \textbf{consult}:
+\begin{itemize}
+	\item Il comando consult appare come un predicato da valutare (un goal) e prende
+almeno un termine che denota un file come argomento.
+	\item Il file deve contenere un insieme di fatti e regole.
+\end{itemize}
+\subsection{Unificazione}
+L'operazione di istanziazione di variabili durante la "prova" di un
+predicato è il risultato di una procedura particolare, detta
+unificazione. Dati due termini, la procedura di unificazione crea un insieme di \emph{sostituzioni} delle variabili, il quale permette di rendere "\textbf{uguali}" i due termini.
+\\ \\
+Tradizionalmente la procedura di unificazione costruisce un insieme di
+sostituzioni chiamato "\color{blue}most general unifier\color{black}" ed indicato con \textit{Mgu}. Una sostituzione è indicata come una sequenza (ordinata) di coppie variabile/valore.
+
+Esempi:
+\begin{flalign*}
+& Mgu(42, 42) \qquad \qquad \qquad \qquad \qquad \qquad \Rightarrow \{ \}&&\\\nonumber
+& Mgu(42, X) \medspace \medspace \qquad \qquad \qquad \qquad \qquad \qquad \Rightarrow \{X/42\}&&\\\nonumber
+& Mgu(X, 42) \medspace \medspace \qquad \qquad  \qquad \qquad \qquad \qquad \Rightarrow \{X/42\}&&\\\nonumber
+& Mgu(foo(bar, 42), foo(bar, X)) \quad \medspace \medspace \medspace \medspace \medspace \quad \Rightarrow \{X/ 42\}&&\\\nonumber
+& Mgu(foo(Y, 42), foo(bar, X)) \quad \medspace\medspace \medspace \medspace \medspace \qquad \Rightarrow \{X/ 42\}&&\\\nonumber
+& Mgu(foo(X), foo(bar(Y))) \quad\quad \medspace\medspace \medspace \medspace \medspace \qquad \Rightarrow \{X/bar(Y), Y/\_ G001\}&&\\\nonumber
+\end{flalign*}
+Notare l'ultimo esempio con \textbf{ridenominazione} di variabili (\_ G001 è il nome assegnato alla variabile che contiene il risultato. Esso è generato dal programma Prolog).
+Il "\textit{most general unifier}" non è nient'altro che il risultato finale della procedura di valutazione - ovvero di prova - del Prolog. 
+
+Il modo più semplice per vedere come la procedura di unificazione funziona è di
+usare l'operatore Prolog = (detto, per l'appunto, \color{blue}operatore di unificazione\color{black}).
+\\ \\
+Esempi:
+\begin{flalign*}
+&?- \quad \textbf{42 = 42.} &&\\\nonumber
+& \quad\quad Yes &&\\\\\nonumber
+&?- \quad \textbf{42 = X.} &&\\\nonumber
+& \quad \quad X=42&&\\\nonumber
+& \quad \quad Yes&&\\\\\nonumber
+&?- \quad \textbf{foo(Y, 42)=foo(bar, X).} &&\\\nonumber
+& \quad \quad Y=bar&&\\\nonumber
+& \quad \quad X=42&&\\\nonumber
+& \quad \quad Yes&&\\\\\nonumber
+\end{flalign*}
+
+\subsection{Liste in Prolog}
+Si definisce una \textit{lista} in Prolog racchiudendo gli elementi (termini
+e/o variabili logiche) della lista tra parentesi quadre
+'[' e ']' e separandoli da virgole. Gli elementi di una lista in Prolog possono essere termini qualsiasi o liste. Per indicare una lista vuota si usa la notazione '[ ]'.
+\\ \\
+Ogni lista non vuota può essere divisa in due parti, una \color{red}\textit{testa} \color{black} ed \color{red}\textit{coda} \color{black}:
+\begin{itemize}
+	\item La \color{red}\textit{testa} \color{black} è il primo elemento della lista.
+	\item La \color{red}\textit{coda} \color{black} rappresenta tutto il resto della lista ed è \textbf{SEMPRE} una lista.
+\end{itemize}
+
+
+\subsubsection{L'operatore | }
+Prolog possiede uno speciale operatore usato per distinguere tra l'inizio e la coda di una lista: l'operatore "\textbf{|}".
+
+Esempi dell'operatore | :
+\begin{flalign*}
+&?- \quad \textbf{[X | Ys] = [mia, vincente, jules, yolanda].} &&\\\nonumber
+& \quad \quad X=mia&&\\\nonumber
+& \quad \quad Ys=[vincent, jules, yolanda]&&\\\nonumber
+& \quad \quad Yes&&\\\\\nonumber
+&?- \quad \textbf{[X, Y | Zs] = [the, answer, is, 42].} &&\\\nonumber
+& \quad \quad X=the&&\\\nonumber
+& \quad \quad Y=answer&&\\\nonumber
+& \quad \quad Zs=[is, 42]&&\\\nonumber
+& \quad \quad Yes&&\\\\\nonumber
+&?- \quad \textbf{[X, 42 | \_] = [41, 42,43, foo(bar)].} &&\\\nonumber
+& \quad \quad X=41&&\\\nonumber
+& \quad \quad Yes&&\\\\\nonumber
+\end{flalign*}
+
 
 
 \end{document}
