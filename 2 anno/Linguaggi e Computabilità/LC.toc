@@ -8,7 +8,8 @@
 \contentsline {paragraph}{Chiusura di Kleene}{3}% 
 \contentsline {subsection}{\numberline {1.3}Linguaggio}{3}% 
 \contentsline {paragraph}{Concatenazione di linguaggi}{4}% 
-\contentsline {subsection}{\numberline {1.4}Grammatica context-free -CFG-}{4}% 
-\contentsline {paragraph}{Stringhe palindrome}{4}% 
-\contentsline {subsection}{\numberline {1.5}Grammatica NON context-free}{5}% 
-\contentsline {section}{\numberline {2}Alberi Sintattici}{6}% 
+\contentsline {subsection}{\numberline {1.4}Grammatiche}{4}% 
+\contentsline {subsubsection}{\numberline {1.4.1}Grammatica libere dal contesto -CFG-}{4}% 
+\contentsline {paragraph}{Stringhe palindrome}{5}% 
+\contentsline {subsubsection}{\numberline {1.4.2}Grammatica NON context-free}{7}% 
+\contentsline {section}{\numberline {2}Alberi Sintattici}{8}% 
