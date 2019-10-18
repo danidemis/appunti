@@ -50,7 +50,7 @@ Un porgramma è un'entità passiva (file eseguibile su disco), un processo è un
 La memoria di un processo è divisa tra stack e heap. Dopo lo heap c'è la sezione \textbf{data} (e in linux anche la sezione \textbf{bss}) e successivamente la sezione \textbf{text}.
 
 \begin{figure}[ht]
-\includegraphics[scale=0.9]{stackHeap.jpg}
+\includegraphics[scale=0.8]{stackHeap.jpg}
 \centering
 \end{figure}
 
@@ -125,4 +125,11 @@ Di solito nei sistemi operativi i processi sono organizzati in maniera gerarchic
 \item PORCODDIO PERCHECAZZO VA COSI VELOCE
 \end{itemize}
 Sistemi operativi diversi creano processi in modo diverso. Possono esistere diverse politiche di condivisione (padre e figlio condividono le risorse, solo alcune, nessuna), diverse politiche di creazione di spazio di indirizzi (il figlio è un duplicato del padre (stessa memoria e programma, oppure il figlio deve eseguire qualcos'altro) e ancora politiche di coordinazione padre/figli (il padre è sospeso finchè i figli non terminano, oppure eseguono in maniera concorrente).
+
+Esempio: sistema UNIX
+\begin{figure}[ht]
+\includegraphics[scale=0.8]{UNIX-process.png}
+\end{figure}
+
+
 \end{document}
