@@ -50,9 +50,10 @@ Un porgramma è un'entità passiva (file eseguibile su disco), un processo è un
 La memoria di un processo è divisa tra stack e heap. Dopo lo heap c'è la sezione \textbf{data} (e in linux anche la sezione \textbf{bss}) e successivamente la sezione \textbf{text}.
 
 \begin{figure}[ht]
-\includegraphics[scale=1]{stackHeap.jpg}
+\includegraphics[scale=0.9]{stackHeap.jpg}
 \centering
 \end{figure}
+
 Durante l'esecuzione un processo può trovarsi in diversi \textit{stati}. 
 Gli stati possibili sono:
 \begin{itemize}
@@ -63,7 +64,7 @@ Gli stati possibili sono:
 	\item Terminato (terminated): il processo ha terminato l'esecuzione.
 \end{itemize}
 
-\includegraphics[scale=0.9]{processStateDiagram.jpg}
+\includegraphics[scale=0.8]{processStateDiagram.jpg}
 
 \subsubsection{Process Control Block}
 Detto anche "Task Control Block", contiene le informazioni relative ad un processo:
@@ -99,13 +100,28 @@ Ci sono diverse code di processi:
 \end{itemize}
 Durante la loro vita i processi migrano tra una coda e l'altra.
 \\ \\
-\includegraphics[scale=1.1]{processQueue.png}[ht]
+\includegraphics[scale=1.1]{processQueue.png}
 \\ \\
 
 Quando un SO decide che si deve cambiare processo, si ha la \textbf{commutazione di contesto} (o \textit{context switch}). Quando la CPU passa ad eseguire un processo diverso, il sistema operativo deve salvare lo stato del processo precedente, e caricare lo stato salvato del processo da rieseguire attaverso un context-switch.
 Il PCB rappresenta il contesto di un processo. Il tempo necessario per il context switching è puro overhead: non viene eseguito alcun lavoro utile. Più è complesso l'SO, più è complesso cambiare processo per il context-switch.
 \\ \\
-\includegraphics[scale=0.7]{context-switching.png}1
+\includegraphics[scale=0.7]{context-switching.png}
 \\ \\ 
+\paragraph{Multitasking nei sistemi mobili} Alcuni sistemi mobili (es. le prime versioni di iOS) permettevano solo ad un processo di essere in esecuzione. Da iOS4 è possibile avere un processo in esecuzione in \textbf{foreground} (ha lo schermo a disposizione) e un certo numero di processi in esecuzione in \textbf{background} (senza schermo), ma con dei limiti.
+Android ha molti meno limiti: i processi in background che vogliono effettuare delle elaborazioni devono creare opportuni \textit{servizi}, che:
+\begin{itemize}
+\item non hanno interfaccia utente
+\item possono usare un ridotto contenuto di memoria
+\item possono continuare a funxionare anche quando l'app in backgorund è sospesa
+\end{itemize}
+L'aumento di potenza dei sistemi mobili rende i loro OS sempre più simili a quelli non mobili.
+
+\subsection{Operazioni sui processi}
+\subsubsection{Creazione di processi}
+Di solito nei sistemi operativi i processi sono organizzati in maniera gerarchica:
+\begin{itemize}
+\item un processo (padre) può creare diversi processi (figli) fino a creare un \textit{albero di processi}.
+\end{itemize}
 
 \end{document}
