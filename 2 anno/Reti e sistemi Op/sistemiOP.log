@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.8)  18 OCT 2019 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.8)  18 OCT 2019 14:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -299,20 +299,20 @@ File: ./images/stackHeap.jpg Graphic file (type jpg)
 <use ./images/stackHeap.jpg>
 Package pdftex.def Info: ./images/stackHeap.jpg  used on input line 53.
 (pdftex.def)             Requested size: 101.46613pt x 259.73598pt.
- [2 <./images/stackHeap.jpg>]
-<./images/processStateDiagram.jpg, id=17, 401.5pt x 228.855pt>
+<./images/processStateDiagram.jpg, id=14, 401.5pt x 228.855pt>
 File: ./images/processStateDiagram.jpg Graphic file (type jpg)
 <use ./images/processStateDiagram.jpg>
 Package pdftex.def Info: ./images/processStateDiagram.jpg  used on input line 6
 7.
 (pdftex.def)             Requested size: 321.20042pt x 183.08423pt.
- [3 <./images/processStateDiagram.jpg>]
+ [2] [3 <./images/stackHeap.jpg> <./images/processStateDiagram.jpg>]
 <./images/ProcessControl.jpg, id=21, 963.6pt x 722.7pt>
 File: ./images/ProcessControl.jpg Graphic file (type jpg)
 <use ./images/ProcessControl.jpg>
 Package pdftex.def Info: ./images/ProcessControl.jpg  used on input line 82.
 (pdftex.def)             Requested size: 289.08223pt x 216.81166pt.
-<./images/processQueue.png, id=22, 296.10625pt x 171.64125pt>
+ [4 <./images/ProcessControl.jpg>]
+<./images/processQueue.png, id=25, 296.10625pt x 171.64125pt>
 File: ./images/processQueue.png Graphic file (type png)
 <use ./images/processQueue.png>
 Package pdftex.def Info: ./images/processQueue.png  used on input line 103.
@@ -332,7 +332,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--105
 
  []
 
-[4 <./images/ProcessControl.jpg>]
 <./images/context-switching.png, id=26, 475.02469pt x 339.51843pt>
 File: ./images/context-switching.png Graphic file (type png)
 <use ./images/context-switching.png>
@@ -359,7 +358,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--111
 Here is how much of TeX's memory you used:
  3883 strings out of 492609
  50319 string characters out of 6131462
- 134409 words of memory out of 5000000
+ 135409 words of memory out of 5000000
  7726 multiletter control sequences out of 15000+600000
  12005 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -371,7 +370,7 @@ m/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on sistemiOP.pdf (7 pages, 261370 bytes).
+Output written on sistemiOP.pdf (7 pages, 262451 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
