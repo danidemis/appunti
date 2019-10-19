@@ -10,6 +10,8 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{float}
+\graphicspath{ {./images/} }
 \usetikzlibrary{arrows}
 
 \tikzset{
@@ -43,9 +45,10 @@
 
 \newtheorem*{problemaDecisione}{Problema di Decisione}
 \newtheorem*{problemaMembership}{Problema di Membership}
-\newtheorem*{relazioneNorm}{Prima relazione}
-\newtheorem*{relazioneStar}{Seconda relazione}
-\newtheorem*{alberoSintattico}{Albero Sintattico}
+\newtheorem{relazioneNorm}{Prima relazione}
+\newtheorem{relazioneStar}{Seconda relazione}
+\newtheorem{alberoSintattico}{Albero Sintattico}
+\newtheorem{eqEnunciati}{Equivalenza degli enunciati}
 
 
 
@@ -178,7 +181,7 @@ Le produzioni di una CFG si applicano per dedurre se una stringa può appartener
 \end{enumerate}
 e questa stringa $w = a*(a+b00)$. Possiamo a questo punto intraprendere due strade per affermare se la stringa $w$ appartiene al linguaggio, quella della \textit{inferenza ricorsiva} o quella della \textit{derivazione}.
 La prima funzina così: creo una tabella (\ref{tab:InfRic}) in cui in ogni passaggio applico una regola specificando per quale linguaggio e quali altre precedenti stringhe già ottenute sto riutilizzando.
-\begin{table}[ht]
+\begin{table}[H]
 \caption{Inferenza Ricorsiva}
 \center
 \label{tab:InfRic}
@@ -196,8 +199,7 @@ La prima funzina così: creo una tabella (\ref{tab:InfRic}) in cui in ogni passa
 (viii) & (a + b00) & E & 4 & (vii) \\
 (ix) & a * (a + b00) & E & 3 & (v),(viii) \\
 \end{tabular}
-\end{table}[ht]
-\\ \\
+\end{table}
 L'altro metodo, quello per \textit{derivazione} prevede invece l'uso delle \textit{relazioni} viste nel paragrafo (1.4.1). La stessa stringa è quindi ottenuta nel seguente modo:
 
 \begin{flalign*}
@@ -206,9 +208,9 @@ L'altro metodo, quello per \textit{derivazione} prevede invece l'uso delle \text
 & \Rightarrow_{lm}a* (a+I)\Rightarrow_{lm}a*(a+I0)\Rightarrow_{lm}a*(a+I00)\Rightarrow_{lm}\textbf{$a*(a+b00)$}&&\\\nonumber
 \end{flalign*}
 
-Per ricavare la stringa abbiamo utilizzato una derivazione sinistra, ma avremmo potuto eseguire la derivazione destra e il risultato sarebbe stato il medesimo. Infatti, \textit{qualunque derivazione ha una derivazione a sinistra e una a destra \textbf{equivalenti}}.
+Per ricavare la stringa abbiamo utilizzato una \textit{derivazione sinistra}, ma avremmo potuto eseguire la \textit{derivazione destra} e il risultato sarebbe stato il medesimo. Infatti, \textit{qualunque derivazione ha una derivazione a sinistra e una a destra \textbf{equivalenti}}. Eseguire una derivazione destra significa infatti applicare la derivazione prima all'elemento più a destra, fino ad arrivare a quello più a sinistra una volta risolta la derivazione.
 
-\subsubsection{Grammatica NON context-free}
+\subsubsection{Grammatiche regolari}
 Il linguaggio di esempio (di tipo 2): $L = \{w \in \{a,b,c\}^{\star} | w = a^nb^nc^n, n\geq 1\}$
 è generato dalla seguente grammatica (NON context-free): $$ G=(\{S,X,B,C\}, \{a,b,c\}, P, S)$$
 e dove le regole di produzione sono:
@@ -282,5 +284,55 @@ E \rightarrow I\medspace |\medspace E+ E\medspace |\medspace E*E\medspace |\meds
 \end{tikzpicture}
 \end{center}
 abbiamo che l'albero sintattico ottenuto è un albero \textbf{radicato} e \textbf{ordinato}. Si può notare che i \color{blue}nodi interni \color{black} rappresentano i passaggi per arrivare alle \color{red}foglie\color{black}. Difatti è possibile ricostruire il processo di derivazione: $$E \rightarrow E \medspace + \medspace E \rightarrow I \medspace + \medspace E$$
+
+\subsubsection{Inferenza, derivazioni e alberi sintattici}
+Ognuna delle nozioni viste fino ad ora  per descrivere una grammatica dà essenzialmente gli stessi risultati sulle stringhe. Quindi possiamo dire che vale il seguente teorema
+\begin{eqEnunciati}
+data una grammatica $G=(V,T,P,S)$, i seguenti enunciati si equivalgono.
+\begin{enumerate}
+	\item l'inferenza ricorsiva stabilisce che la stringa $w$ è nel linguaggio della variabile A.
+	\item $A\Rightarrow^{*} w$.
+	\item $A\Rightarrow^{*}_{lm} w$.
+	\item $A\Rightarrow^{*}_{rm} w$.
+	\item esiste un albero sintattico con radice A e prodotto $w$.
+\end{enumerate}
+\end{eqEnunciati}
+Se escludiamo l'inferenza ricorsciva, definita solo per stringhe terminali, le altre condizioni -l'esistenza di derivazioni generiche, destre o sinistre, e di alberi sintattici - sono equivalenti anche se $w$ contiene variabili.
+\begin{figure}[H]
+\includegraphics[scale=0.4]{derivazione_inf_albero.png}
+\centering
+\end{figure}
+
+Banalmente, se $w$ ha un derivazione a sinistra (o a destra) da A, allora avrà una anche una \textit{derivazione}, dato che una derivazione a sinistra (o a destra) è una derivazione.
+\\\\
+\subsubsection*{Dalle inferenze agli alberi}
+\paragraph*{\textbf{Teorema}} Sia $G=(V,T,P,S)$ una CFG. Se la procedura di inferenza ricorsiva indica che la stringa terminale $w$ è nel linguaggio della variabile A, allora esiste un albero sintattico con radice A e prodotto $w$.
+\paragraph*{DIMOSTRAZIONE} La dimostrazione è un'induzione sul numero di passi usati per dedurre che $w$ è nel linguaggio di A.
+
+\subparagraph*{BASE} Un solo passo. In questo caso deve essere stata usata solo la base della procedura di inferenza. Di conseguenza deve esistere per forza una produzione $A \rightarrow w$. L'albero sotto riportato, in cui esiste una sola foglia per ogni posizione di $w$, soddisfa le condizioni degli alberi sintattici per la grammatica G, e ha evidentemente prodotto $w$ e radice A.
+
+\begin{figure}[H]
+\includegraphics[scale=0.4]{albero_A_w.png}
+\centering
+\end{figure}
+
+\subparagraph*{INDUZIONE} Supponiamo di aver dedotto che $w$ è nel linguaggio di A dopo $n+1$ passi di inferenza, e che l'enunciato del teorema sia valido per tutte le stringhe $x$ e variabili $B$ tali che l'appertenenza di $x$ al linguaggio $B$ si deduca in $n$, o meno, passi di inferenza. Questa inferenza impiega una certa produzione per A, poniamo $A \rightarrow X_1, X_2,...,X_k$, dove ogni $X_i$ è una variabile oppure un terminale.
+\\ \\
+Possiamo scomporre $w$ in $w_1,w_2,...,w_k$ soddisfacendo le seguenti clausole:
+\begin{enumerate}
+	\item Se $X_i$ è un terminale, allora $w_i = X_i$, cioè $w_i$ consiste solamente di questo terminale.
+	\item Se $X_i$ è una variabile, allora $w_i$ è una stringa di cui è stata precedentemente dedotta l'appartenenza al linguaggio di $X_i$. In altre parole l'inferenza relativa a $w_i$ ha richiesto al massimo $n$ degli $n+1$ passi dell'inferenza per la quale $w$ si trova nel linguaggio di A. Non richiede tutti gli $n+1$ passi perchè il passo finale, che si avvale della produzione $A \rightarrow X_1, X_2, ..., X_k$, non è sicuramente parte dell'inferenza di $w_i$. Di conseguenza possiamo applicare l'ipotesi induttiva a $w_i$ e $X_i$, e concludere che esiste un albero sintattico con prodotto $w_i$ e radice $X_i$.	
+\end{enumerate}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{derivazione_inf_albero_mult.png}
+\centering
+\end{figure}
+
+Construiamo poi un albero come quello soprastante.
+
+Il nodo di ciascuna $X_i$ diventa la radice di un sottoalbero con prodotto $w_i$. Nel caso in cui $X_i$ sia un simbolo terminale, questo sottoalbero è un albero banale con un solo nodo etichettato con $X_i$. Nel caso in cui $X_i$ è una variabile, invochiamo l'ipotesi induttiva per sostenere che esiste un albero con radice  $X_i$ e prodotto $w_i$. 
+
+L'albero costruito in questo modo ha radice A e prodotto formato dai prodotti dei sottoalberi, concatenati da sinistra a destra. la stringa è $w_1, w_2, ... ,w_k$ ovvero $w$. 
 
 \end{document}

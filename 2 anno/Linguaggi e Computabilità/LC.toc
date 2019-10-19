@@ -11,5 +11,6 @@
 \contentsline {subsection}{\numberline {1.4}Grammatiche}{4}% 
 \contentsline {subsubsection}{\numberline {1.4.1}Grammatica libere dal contesto -CFG-}{4}% 
 \contentsline {paragraph}{Stringhe palindrome}{5}% 
-\contentsline {subsubsection}{\numberline {1.4.2}Grammatica NON context-free}{7}% 
+\contentsline {subsubsection}{\numberline {1.4.2}Grammatiche regolari}{7}% 
 \contentsline {section}{\numberline {2}Alberi Sintattici}{8}% 
+\contentsline {subsubsection}{\numberline {2.0.1}Inferenza, derivazioni e alberi sintattici}{9}% 
