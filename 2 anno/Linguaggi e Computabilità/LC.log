@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.17)  18 OCT 2019 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.17)  18 OCT 2019 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -604,13 +604,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--154
 
  []
 
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 225--231
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 179--202
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 226--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--231
+Underfull \hbox (badness 10000) in paragraph at lines 226--232
 
  []
 
@@ -638,7 +643,7 @@ ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm10.pfb>
-Output written on LC.pdf (9 pages, 183568 bytes).
+Output written on LC.pdf (9 pages, 183756 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream

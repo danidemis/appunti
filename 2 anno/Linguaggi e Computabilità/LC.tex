@@ -177,7 +177,7 @@ Le produzioni di una CFG si applicano per dedurre se una stringa può appartener
 	\item $I \rightarrow I1$
 \end{enumerate}
 e questa stringa $w = a*(a+b00)$. Possiamo a questo punto intraprendere due strade per affermare se la stringa $w$ appartiene al linguaggio, quella della \textit{inferenza ricorsiva} o quella della \textit{derivazione}.
-La prima funzina così: creo una tabella in cui in ogni passaggio applico una regola specificando per quale linguaggio e quali altre precedenti stringhe già ottenute sto riutilizzando.
+La prima funzina così: creo una tabella (\ref{tab:InfRic}) in cui in ogni passaggio applico una regola specificando per quale linguaggio e quali altre precedenti stringhe già ottenute sto riutilizzando.
 \begin{table}[ht]
 \caption{Inferenza Ricorsiva}
 \center
@@ -196,7 +196,8 @@ La prima funzina così: creo una tabella in cui in ogni passaggio applico una re
 (viii) & (a + b00) & E & 4 & (vii) \\
 (ix) & a * (a + b00) & E & 3 & (v),(viii) \\
 \end{tabular}
-\end{table}
+\end{table}[ht]
+\\ \\
 L'altro metodo, quello per \textit{derivazione} prevede invece l'uso delle \textit{relazioni} viste nel paragrafo (1.4.1). La stessa stringa è quindi ottenuta nel seguente modo:
 
 \begin{flalign*}
