@@ -8,6 +8,7 @@
 \usepackage{amsthm}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{enumitem}
 \usepackage{fourier} %per il simbolo di Attenzione!
 \usepackage{multirow} % Required for multirows
 
@@ -347,6 +348,81 @@ Il comando principale che assolve questa funzione è \textbf{consult}:
 almeno un termine che denota un file come argomento.
 	\item Il file deve contenere un insieme di fatti e regole.
 \end{itemize}
+
+\subsubsection{Risoluzione ad Input Lineare}
+Il sistema Prolog dimostra la veridicità o meno di un'interrogazione (un goal) eseguendo \textit{una sequenza di passi di risoluzione}. L'ordine complessivo in cui questi passi vengono eseguiti rende i sistemi di prova di teoremi basati su risoluzione più o meno "\emph{efficaci}".
+
+Infatti, in Prolog la risoluzione avviene sempre tra l'ultimo goal derivato in ciascun passo e una "clausola di programma"; non avviene mai tra due clausole di programma o fra una clausola di programma ed un goal derivato in precedenza. 
+Questa particolare forma di risoluzione prende il nome di \color{blue} Risoluzione SLD \color{black} (\textit{Selection} function for \textit{Linear} and \textit{Definite} sentences \textbf{Resolution}) in cui le frasi "lineari" sono essenzialmente le clausole di Horn.
+\\ \\
+Questo metodo di risoluzione funziona in modo semplice ed efficace. Prendiamo ad esempio il seguente goal $G_j$:
+\begin{equation}
+G_j \equiv ?- A_{i,1}, \: A_{i,2}, \: A_{i,3},...,A_{i,m}.
+\end{equation}
+e la regola 
+\begin{equation}
+A_r :- B_{r,1}, B_{r,2}, ...,B_{r,k}.
+\end{equation}
+se esiste un unificatore $\sigma$ tale che $\sigma [A_r] = \sigma [A_{i,1}]$, allora si ottiene un nuovo  goal $G_{j+1}$
+\begin{equation}
+G_{j+1} \equiv ?- B^1_{r,1}, B^1_{r,2}, ... ,B^1_{r,k}, A^1_{i, 2},A^1_{i, 3},...,A^1_{i, m}.
+\end{equation}
+Questo è \textbf{un} passo di risoluzione eseguito dal sistema Prolog (in cui $A^1$ e i $B^1$ sono i risultati $\sigma [A] = A^1$ e $\sigma [B] = B^1$.
+In altre parole, potremmo scrivere l'esempio come sequenza di passaggi:
+\begin{enumerate}[label=(P\arabic*)]
+	\item $A_r (=A_{i,1}) :- \neg B_1 \wedge B_2 \wedge ... \wedge B_n$
+	\item $\neg A_{i,1} \vee \neg A_{i,2} \vee ... \vee \neg A_{i,m}$
+	\item $A_{1,1}, \vee \neg B_1 \vee \neg B_2 \vee ... \vee \neg B_n$
+	\item $\neg B_1 \vee \neg B_2 ... \vee \neg B_n \vee \neg A_{i,2} \vee \neg A_{i,3} ... \vee \neg A_{i,m} $
+\end{enumerate}
+Noi sappiamo che $A_{i,1}$ può essere risolto con $A_r$. Ma $A_r$ è a sua volta una query (P1). Il primo termine della query può essere unificato con il negato della seconda, il quale produce il nuovo goal (P4).
+\\ \\
+In una soluzione SLD, il passo di risoluzione avviene sempre tra l'ultimo goal e una clausola di programma. Il risultato può essere
+\begin{itemize}
+	\item SUCCESS: viene generata la clausola vuota, ovvero se per  finito, $G_n$ è uguale alla clausola vuota $G_n \equiv :- $
+	\item FINITE INSUCCESS: se per $n$ finito, $G_n$ non è uguale alla clausola vuota e non è più possibile derivare un nuovo \textit{risolvente} da $G_n$ ed una clausola di programma.
+	\item INFINITE INSUCCESS: se è possibile derivare nuovi \textit{risolventi} tutti diversi dalla clausola.
+\end{itemize}
+Durante il processo di generazione di goal intermedi si costruiscono delle variabili dei letterali e delle clausole coinvolti mediante la rinominazione di variabili.
+La rinominazione avviene nel momento in cui si genera un nuovo goal ma ci si deve portare dietro le variabili che non sono state unificate, per esempio. 
+
+Un esempio di \textbf{renaming} di variabili è il seguente: presa
+$$p(X) :- q(X, g(z)). $$
+è equivalente alla clausola 
+$$p(X1) :- q(X1, g(FooFrobboz)). $$
+rinominata.
+\\ \\
+Per applicare la risoluzione del goal corrente ci possono essere diverse clausole di programma adeguate al compito. Ci sono diverse strategie, di cui due sono le seguenti:
+\begin{enumerate}
+	\item \textbf{In profondità (\textit{Depth First}}: si sceglie una clausola e si mantiene fissa questa scelta, finché non si arriva alla clausola vuota o alla impossibilità di fare nuove risoluzioni; in questo ultimo caso si riconsiderano le scelte fatte precedentemente.
+	\item \textbf{In ampiezza (\textit{Breadth First}}: si considerano in parallelo tutte le possibili alternative.
+\end{enumerate}
+Il Prolog adotta una strategia di risoluzione "\textit{in profondità}" con \color{blue} backtracking\color{black}. Questo permette di risparmiare memoria ma non è completa per le clausole di Horn.
+
+\subsubsection{Alberi di derivazione SLD}
+Dato un programma logico $P$, un goal $G_0$ e una regola di calcolo $R$, un \textbf{albero SLD} per $P \cup \{G_0\}$ via $R$ è definito sulla base del processo di prova visto precedentemente;
+\begin{itemize}
+	\item Ciascun nodo dell'albero è un goal (possibilmente vuoto)
+	\item La radice dell'albero SLD e il goal $G_0$
+	\item Dato il nodo 
+		\begin{equation*}
+		:- A_1 , ... ,A_{m-1}, A_m, A_{m+1},...,A_k.
+		\end{equation*}
+		se $A_m$ è il sottogoal \textit{selezionato} dalla regola di calcolo $R$, allora questo nodo (genitore) ha un nodo figlio per ciascuna clausola del tipo
+		\begin{flalign*}
+		& C_i \equiv A_i :- B_{i,1}, ... ,B_{i, q}&&\\\nonumber
+		& C_k \equiv A_k. &&
+		\end{flalign*}
+		di P tale che $A_i$ e $A_m$  ($A_k$ e $A_m$) sono unificabili attraverso la sostituzione più generale $\sigma$.
+		\item Il nodo figlio è etichettato con la clausola goal 
+		\begin{flalign*}
+		& :- \sigma [A_1, ... , A_{m-1}, B_{i,1}, ... , B_{i,q}, A_{m+1}, ... A_k]&&\\\nonumber
+		& :- \sigma [A_1, ... , A_{m-1}, A_{m+1}, ... A_k] &&
+		\end{flalign*}
+		e il ramo dal nodo padre al figlio è etichettato dalla sostituzione $\sigma$ e dalla clausola delezionata $C_i$ (o $C_k$).
+		\item Il nodo vuoto (indicato con ":-") non ha figli.
+\end{itemize}
+
 \subsection{Unificazione}
 L'operazione di istanziazione di variabili durante la "prova" di un
 predicato è il risultato di una procedura particolare, detta

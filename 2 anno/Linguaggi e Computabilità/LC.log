@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  21 OCT 2019 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  21 OCT 2019 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,26 +512,7 @@ File: pgflibraryarrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \c@alberoSintattico=\count133
 \c@eqEnunciati=\count134
 \c@ambiguitaSinistra=\count135
- (./LC.aux
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 <
-      <<<<<< HEAD
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Label `stigeiz' multiply defined.
-
-
-LaTeX Warning: Label `img:ambiguita_due_alberi' multiply defined.
-
-)
+ (./LC.aux)
 \openout1 = `LC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -558,11 +539,6 @@ italian.ldf    See the documentation concerning the babel-italian typesetting
 italian.ldf    on input line 60.
 
 (f:/Programmi/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-Overfull \hbox (98.02185pt too wide) in paragraph at lines 19--13
-[]\OT1/cmr/m/n/10.95 <<<<<<< HEAD                 =======             >>>>>>> 1
-7f2d826863398633899e8bb6fcbbf377377e780
- []
-
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count136
 \scratchdimen=\dimen168
@@ -626,9 +602,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-ABD: EveryShipout initializing macros [1
-
-{f:/Programmi/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+ABD: EveryShipout initializing macros
 LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
 
 
@@ -645,10 +619,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `LC.toc'.
 
 
-[2]
+[1
+
+{f:/Programmi/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
 9.
- (f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+
+(f:/Programmi/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -658,12 +635,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
  []
 
-[3]
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 104--108
 
  []
 
-[4] [5]
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
@@ -673,12 +650,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 156--161
 
  []
 
-[6] [7]
+[5] [6]
 Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
@@ -688,7 +665,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
-[8]
+[7]
 Overfull \hbox (38.35318pt too wide) in paragraph at lines 233--235
  \OT1/cmr/bx/n/10.95 Esem-pio 1[] \OT1/cmr/m/n/10.95 Pren-dia-mo il lin-guag-gi
 o $\OML/cmm/m/it/10.95 L \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/i
@@ -698,18 +675,18 @@ mr/m/n/10.95 0 \OML/cmm/m/it/10.95 e \OT1/cmr/m/n/10.95 1 \OML/cmm/m/it/10.95 a
 lternati\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 .
  []
 
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 256--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--262
+
+ []
+
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 256--262
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--262
-
- []
-
-[10]
-<./images/ambiguita_due_alberi.png, id=50, 461.11403pt x 192.98473pt>
+<./images/ambiguita_due_alberi.png, id=47, 461.11403pt x 192.98473pt>
 File: ./images/ambiguita_due_alberi.png Graphic file (type png)
 <use ./images/ambiguita_due_alberi.png>
 Package pdftex.def Info: ./images/ambiguita_due_alberi.png  used on input line 
@@ -720,7 +697,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--306
 
  []
 
-[11 <./images/ambiguita_due_alberi.png (PNG copy)>] [12]
+[10 <./images/ambiguita_due_alberi.png (PNG copy)>] [11]
 Underfull \hbox (badness 10000) in paragraph at lines 328--330
 
  []
@@ -730,20 +707,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--330
 
  []
 
-<./images/albero_non_ambiguo_1.png, id=57, 527.09967pt x 579.74835pt>
+<./images/albero_non_ambiguo_1.png, id=54, 527.09967pt x 579.74835pt>
 File: ./images/albero_non_ambiguo_1.png Graphic file (type png)
 <use ./images/albero_non_ambiguo_1.png>
 Package pdftex.def Info: ./images/albero_non_ambiguo_1.png  used on input line 
 344.
 (pdftex.def)             Requested size: 263.54918pt x 289.87346pt.
-[13] [14 <./images/albero_non_ambiguo_1.png (PNG copy)>]
-<./images/derivazione_inf_albero.png, id=65, 848.38696pt x 328.78879pt>
+[12] [13 <./images/albero_non_ambiguo_1.png (PNG copy)>]
+<./images/derivazione_inf_albero.png, id=62, 848.38696pt x 328.78879pt>
 File: ./images/derivazione_inf_albero.png Graphic file (type png)
 <use ./images/derivazione_inf_albero.png>
 Package pdftex.def Info: ./images/derivazione_inf_albero.png  used on input lin
 e 397.
 (pdftex.def)             Requested size: 339.34877pt x 131.51318pt.
- [15]
+ [14]
 Underfull \hbox (badness 10000) in paragraph at lines 401--403
 
  []
@@ -759,38 +736,38 @@ Overfull \hbox (0.74129pt too wide) in paragraph at lines 405--406
 ^^Re un'in-du-zio-ne sul nu-me-ro di pas-
  []
 
-<./images/albero_A_w.png, id=71, 538.88283pt x 240.63527pt>
+<./images/albero_A_w.png, id=68, 538.88283pt x 240.63527pt>
 File: ./images/albero_A_w.png Graphic file (type png)
 <use ./images/albero_A_w.png>
 Package pdftex.def Info: ./images/albero_A_w.png  used on input line 410.
 (pdftex.def)             Requested size: 215.5493pt x 96.2524pt.
-[16 <./images/derivazione_inf_albero.png (PNG copy)>]
+[15 <./images/derivazione_inf_albero.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 414--418
 
  []
 
-<./images/derivazione_inf_albero_mult.png, id=75, 538.88283pt x 240.63527pt>
+<./images/derivazione_inf_albero_mult.png, id=72, 538.88283pt x 240.63527pt>
 File: ./images/derivazione_inf_albero_mult.png Graphic file (type png)
 <use ./images/derivazione_inf_albero_mult.png>
 Package pdftex.def Info: ./images/derivazione_inf_albero_mult.png  used on inpu
 t line 423.
 (pdftex.def)             Requested size: 269.44075pt x 120.31734pt.
-[17 <./images/albero_A_w.png (PNG copy)> <./images/derivazione_inf_albero_mult.
+[16 <./images/albero_A_w.png (PNG copy)> <./images/derivazione_inf_albero_mult.
 png (PNG copy)>]
 Overfull \hbox (23.37634pt too wide) in paragraph at lines 431--432
 \OT1/cmr/m/n/10.95 pro-dot-ti dei sot-toal-be-ri, con-ca-te-na-ti da si-ni-stra
  a de-stra. la strin-ga ^^Re $\OML/cmm/m/it/10.95 w[]; w[]; :::; w[]$
  []
 
-[18] (./LC.aux)
+[17] (./LC.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
  15094 strings out of 493281
  293627 string characters out of 6146515
- 342855 words of memory out of 5000000
+ 341753 words of memory out of 5000000
  18971 multiletter control sequences out of 15000+600000
  14229 words of font info for 53 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
@@ -811,10 +788,10 @@ ssbx10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
 m/cmsy8.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti10.pfb><f:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb>
-Output written on LC.pdf (18 pages, 300391 bytes).
+Output written on LC.pdf (17 pages, 299791 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
