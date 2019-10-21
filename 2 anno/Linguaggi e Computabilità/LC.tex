@@ -11,6 +11,7 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{float}
+\usepackage[shortlabels]{enumitem}
 \graphicspath{ {./images/} }
 \usetikzlibrary{arrows}
 
@@ -22,6 +23,7 @@
   arn_r/.style = {treenode, circle, red, draw=red, 
     text width=1.5em, very thick},% arbre rouge noir, noeud rouge
 }
+
 
 \begin{comment}
 \newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
@@ -49,6 +51,7 @@
 \newtheorem{relazioneStar}{Seconda relazione}
 \newtheorem{alberoSintattico}{Albero Sintattico}
 \newtheorem{eqEnunciati}{Equivalenza degli enunciati}
+\newtheorem{ambiguitaSinistra}{Teorema}
 
 
 
@@ -166,7 +169,7 @@ Sia $G=(V, T,P,S)$ una CFG e sia $\alpha A \beta$ tale che $\alpha,\beta \in (V\
 Si ha che $\alpha \Rightarrow^{\star} \beta$, con $\alpha, \beta \in (V \cup T)^{\star}$, se e solo se $\exists \medspace \gamma_{1}, \gamma_{2}, ... ,\gamma_{n} \in (V\cup T)^{\star}$ tale che $\alpha \Rightarrow \gamma_{1} \Rightarrow \gamma_{2} \Rightarrow \gamma_{3} \Rightarrow ... \Rightarrow \gamma_{n} \Rightarrow \beta$ con $n \geq 1$.
 Se n = 1, allora $\alpha = \beta$ e vale $\alpha \Rightarrow^{\star} \beta$ cioè $\alpha \Rightarrow^{\star} \gamma$.
 \end{relazioneStar}
-Le produzioni di una CFG si applicano per dedurre se una stringa può appartenere al linguaggio oppure no. Per fare questo si possono utilizzare due metodi differenti. Prese le seguenti regole
+Le produzioni di una CFG si applicano per dedurre se una stringa può appartenere al linguaggio oppure no. Per fare questo si possono utilizzare due metodi differenti. Prese le seguenti regole (Regole 1.4.1)
 \begin{enumerate}
 	\item $E \rightarrow I$
 	\item $E \rightarrow E+E$
@@ -249,6 +252,70 @@ S(n-1 \medspace volte \rightarrow (1)) a^{n-1}S(BC)^{n-1}\rightarrow (2) a^n(BC)
 
 Esercizio: creo una CFG su $L = \{a^{n+m}xc^nyd^m, \medspace con n,m \geq 0\}$:
 
+\subsection{Ambiguità nelle grammatiche e nei linguaggi}
+Fino ad ora abbiamo implicitamente ipotizzato che una grammatica associ in modo univoco una struttura a ogni stringa del linguaggio. Non sempre è così. 
+
+Se una grammatica non genera strutture univoche, talvolta possiamo modificarla per raggiungere lo scopo. Se però questo non è possibile, siamo di fronte a quelli che si possono chiamare CFL "\textit{inerentemente ambigui}"; ogni grammatica di tale linguaggio associa più di una struttura ad alcune stringhe del linguaggio.
+
+\subsubsection{Grammatiche ambigue}
+Prendiamo l'esempio con le regole della grammatica della sezione (1.4.1). Questa grammatica genera espressioni con qualsiasi sequenza degli operatori * e +; le produzioni $E \rightarrow E +E |E*E$ permettono di generarle in qualsiasi ordine.
+
+Se infatti prediamo la forma sentenziale $E+E*E$, essa ha due derivazioni da E:
+\begin{enumerate}
+	\item $E \Rightarrow E+E \Rightarrow E+E*E$
+	\item $E \Rightarrow E*E \Rightarrow E+E*E$
+\end{enumerate} 
+Notiamo che nella derivazione (1) la seconda $E$ è sostituita da $E*E$, mentre nella derivazione (2) la prima $E$ è sostituita da $E+E$. La figura \ref{img:ambiguita_due_alberi} rappresenta i due alberi sintattici diversi tra loro.
+
+\begin{figure}[H]
+\caption{Due alberi sintattici diversi con lo stesso prodotto}
+\label{img:ambiguita_due_alberi}
+\includegraphics[scale=0.6]{ambiguita_due_alberi.png}
+\centering
+\end{figure}
+
+\subsubsection{Eliminare le ambiguità da una grammatica}
+In un mondo ideale sapremmo definire un algoritmo per eliminare le ambiguità dalle CFG per come le abbiamo definite. Purtoppo non esiste un modo per definire un algoritmo che data una qualsiasi CFG ci dice se essa è ambigua oppure no. Per fortuna nella pratica la situazione non è così drammatica. Per dirne una, nelle strutture sintattiche tipiche dei linguaggi di programmazione usuali esistono tecniche note per eliminare le ambiguità.
+\\ \\
+Utilizzeremo ancora l'esempio della sezione (1.4.1) per capire come è possibile eliminare l'ambiguità.
+Possiamo notare che come prima cosa si hanno due cause di ambiguità:
+\begin{enumerate}
+	\item La precedenza degli operatori non è rispettata. Infatti, mentre nel primo caso applichiamo in "ordine" le derivazioni (prima $E+E$, poi alla seconda $E$ applichiamo $E*E$), nel secondo caso viene applicata prima $E*E$ e successivamente sulla \textit{prima} $E$ si applica $E+E$. Dovrebbe essere lecita solo la prima derivazione, quella "\textit{ordinata}".
+	\item Una sequenza di operatori identici si può raggruppare sia da sinistra che da destra. Quindi, nal caso si ha $E+E+E$ ad esempio, visto che la somma (ma anche la moltiplicazione) sono associative, bisogna prendere una posizione e scegliere da che parte si decide di proseguire. La soluzione convenzionale è quella che prevede di raggruppare da sinistra.
+\end{enumerate}
+
+
+Il problema di imporre una precedenza si risolve introducendo alcune variabili, ognuna delle quali rappresenta le espressioni con lo stesso grado di "forza di legamento", secondo lo schema seguente:
+\begin{enumerate}
+	\item Un \textit{fattore} è un'espressione che non si può scomporre rispetto ad un operatore adiacente, * o +. Nel linguaggio delle espressioni i soli fattori sono i seguenti:
+	\begin{enumerate}[(a)]
+		\item Identificatori. Non è possibile separare le lettere di un identificatorie inserendo un operatore.
+		\item Qualsiasi espressione fra parentesi, indipendentemente dal suo contenuto. Lo scopo delle parentesi è proprio quello di impedire che ciò che racchiudono diventi l'operando di un operatore esterno.
+	\end{enumerate}
+	\item Un\textit{termine} è un'espressione che non può essere scomposta dall'operatore +. Nell'esempio, in cui + e * sono i soli operatori, un termine è il prodotto di uno o più fattori. Per esempio il termine $a*b$ può essere scomposto se applichiamo l'associatività a sinistra e poniamo $a1 *$ alla sua sinistra. Infatti $a1*a*b$ può essere raggruppato come $(a1*a)*b$, che separa $a*b$. Se invece poniamo un termine additivo come $a1+ $ a sinistra o $+a1$ a destra, non possiamo spezzarlo. Il raggruppamento corretto di $a1+a*b$ è $a1+(a*b)$, mentre quello di $a*b+a1$ è $(a*b)+a1$.
+	\item Per \textit{espressione} intenderemo d'ra in avanti qualsiasi espressione, comprese quelle che possono essere spezzate da un * o da un + adiacente. Nell'esempio, perciò, un'espressione è la somma di due o più termini. 
+\end{enumerate}
+
+\paragraph{Derivazioni a sinistra per esprimere ambiguità} Possiamo affermare che le derivazioni non sono necessariamente uniche, anche in grammatiche non ambigue. Ma in generale, in una grammatica non ambigua le derivazioni a sinistra (come quelle a destra) sono uniche.
+
+\begin{ambiguitaSinistra}
+Per ogni grammatica $G=(V,T,P,S)$ e per ogni stringa $w$ in $T^*$, $w$ ha due alberi distinti se e solo se ha due distinte derivazioni \textbf{a sinistra} da $S$.
+\end{ambiguitaSinistra}
+
+\paragraph{Dimostrazione} (Solo se) Esaminiamo la costruzione di una derivazione a sinistra a partire da un albero sintattico. Possiamo osservare che in corrispondenza di un nodo in cui gli alberi applicano produzioni diverse, anche le due derivazioni a sinistra applicano due produzioni diverse, e sono perciò distinte.
+
+\subsubsection{Ambiguità inerente}
+ Un linguaggio $L$ CFG si dice \textbf{inerentemente ambiguo} se tutte le sue grammatiche sono ambigue. Se anche solo una grammatica per $L$ non è ambigua, allora $L$ non è ambiguo. Anche se, per esempio, presa la stringa $a*a+a$ vista precedentemente, possiamo dire che esiste per essa una grammatica non ambigua.
+ 
+ Infatti, la grammatica definita come
+ \begin{enumerate}
+ 	\item $I \rightarrow a|b|Ia|Ib|I0|I1$
+ 	\item $F \rightarrow I|(E)$
+ 	\item $T \rightarrow F | T*F$
+ 	\item $E \rightarrow T|E+T$
+\end{enumerate}
+genera la stringa $a*a+a$ in modo non ambiguo con la seguente derivazione:
+  
 
 \section{Alberi Sintattici}
 Un albero sintattico è una rappresentazione grafica (ad albero) che mostra come una forma sentenziale o una stringa è stata ottenuta tramite le regole di derivazione.

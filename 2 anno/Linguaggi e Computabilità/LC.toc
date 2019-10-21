@@ -12,5 +12,11 @@
 \contentsline {subsubsection}{\numberline {1.4.1}Grammatica libere dal contesto -CFG-}{4}% 
 \contentsline {paragraph}{Stringhe palindrome}{5}% 
 \contentsline {subsubsection}{\numberline {1.4.2}Grammatiche regolari}{7}% 
-\contentsline {section}{\numberline {2}Alberi Sintattici}{8}% 
-\contentsline {subsubsection}{\numberline {2.0.1}Inferenza, derivazioni e alberi sintattici}{9}% 
+\contentsline {subsection}{\numberline {1.5}Ambiguit\IeC {\`a} nelle grammatiche e nei linguaggi}{9}% 
+\contentsline {subsubsection}{\numberline {1.5.1}Grammatiche ambigue}{9}% 
+\contentsline {subsubsection}{\numberline {1.5.2}Eliminare le ambiguit\IeC {\`a} da una grammatica}{9}% 
+\contentsline {paragraph}{Derivazioni a sinistra per esprimere ambiguit\IeC {\`a}}{11}% 
+\contentsline {paragraph}{Dimostrazione}{11}% 
+\contentsline {subsubsection}{\numberline {1.5.3}Ambiguit\IeC {\`a} inerente}{11}% 
+\contentsline {section}{\numberline {2}Alberi Sintattici}{12}% 
+\contentsline {subsubsection}{\numberline {2.0.1}Inferenza, derivazioni e alberi sintattici}{13}% 

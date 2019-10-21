@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.17)  19 OCT 2019 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.17)  21 OCT 2019 12:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,6 +466,15 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks44
 \@floatcapt=\box41
 )
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip51
+\enit@outerparindent=\dimen164
+\enit@toks=\toks45
+\enit@inbox=\box42
+\enit@count@id=\count129
+\enitdp@description=\count130
+)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2019/05/09 v3.1.3 (3.1.3)
@@ -473,29 +482,30 @@ File: tikzlibraryarrows.code.tex 2019/05/09 v3.1.3 (3.1.3)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2019/05/09 v3.1.3 (3.1.3)
-\arrowsize=\dimen164
+\arrowsize=\dimen165
 ))
-\c@relazioneNorm=\count129
-\c@relazioneStar=\count130
-\c@alberoSintattico=\count131
-\c@eqEnunciati=\count132
+\c@relazioneNorm=\count131
+\c@relazioneStar=\count132
+\c@alberoSintattico=\count133
+\c@eqEnunciati=\count134
+\c@ambiguitaSinistra=\count135
  (./LC.aux)
 \openout1 = `LC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Info: Redefining \it@ocap on input line 57.
-LaTeX Info: Redefining \it@ccap on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Info: Redefining \it@ocap on input line 60.
+LaTeX Info: Redefining \it@ccap on input line 60.
 
 
 File italian.ldf warning: 
@@ -503,21 +513,21 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 57.
+italian.ldf    on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count133
-\scratchdimen=\dimen165
-\scratchbox=\box42
-\nofMPsegments=\count134
-\nofMParguments=\count135
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count136
-\MPscratchDim=\dimen166
-\MPnumerator=\count137
-\makeMPintoPDFobject=\count138
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count136
+\scratchdimen=\dimen166
+\scratchbox=\box43
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen167
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
+\everyMPtoPDFconversion=\toks47
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -570,12 +580,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 59.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 59.
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -583,124 +593,137 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `LC.toc'.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 101--104
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 153--157
+Underfull \hbox (badness 10000) in paragraph at lines 156--161
 
  []
 
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 228--234
+[5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 231--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--234
+Underfull \hbox (badness 10000) in paragraph at lines 231--237
 
  []
 
-[7] [8]
-<./images/derivazione_inf_albero.png, id=44, 848.38696pt x 328.78879pt>
+[8]
+<./images/ambiguita_due_alberi.png, id=44, 461.11403pt x 192.98473pt>
+File: ./images/ambiguita_due_alberi.png Graphic file (type png)
+<use ./images/ambiguita_due_alberi.png>
+Package pdftex.def Info: ./images/ambiguita_due_alberi.png  used on input line 
+273.
+(pdftex.def)             Requested size: 276.67055pt x 115.79172pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--283
+
+ []
+
+[9 <./images/ambiguita_due_alberi.png (PNG copy)>] [10] [11] [12]
+<./images/derivazione_inf_albero.png, id=59, 848.38696pt x 328.78879pt>
 File: ./images/derivazione_inf_albero.png Graphic file (type png)
 <use ./images/derivazione_inf_albero.png>
 Package pdftex.def Info: ./images/derivazione_inf_albero.png  used on input lin
-e 302.
+e 369.
 (pdftex.def)             Requested size: 339.34877pt x 131.51318pt.
- [9]
-Underfull \hbox (badness 10000) in paragraph at lines 306--308
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--308
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
 
  []
 
-
-Overfull \hbox (0.74129pt too wide) in paragraph at lines 310--311
+[13 <./images/derivazione_inf_albero.png (PNG copy)>]
+Overfull \hbox (0.74129pt too wide) in paragraph at lines 377--378
  \OT1/cmr/bx/n/10.95 DI-MO-STRA-ZIO-NE \OT1/cmr/m/n/10.95 La di-mo-stra-zio-ne 
 ^^Re un'in-du-zio-ne sul nu-me-ro di pas-
  []
 
-<./images/albero_A_w.png, id=50, 538.88283pt x 240.63527pt>
+<./images/albero_A_w.png, id=64, 538.88283pt x 240.63527pt>
 File: ./images/albero_A_w.png Graphic file (type png)
 <use ./images/albero_A_w.png>
-Package pdftex.def Info: ./images/albero_A_w.png  used on input line 315.
+Package pdftex.def Info: ./images/albero_A_w.png  used on input line 382.
 (pdftex.def)             Requested size: 215.5493pt x 96.2524pt.
-[10 <./images/derivazione_inf_albero.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 319--322
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--390
 
  []
 
-<./images/derivazione_inf_albero_mult.png, id=54, 538.88283pt x 240.63527pt>
+[14 <./images/albero_A_w.png (PNG copy)>]
+<./images/derivazione_inf_albero_mult.png, id=68, 538.88283pt x 240.63527pt>
 File: ./images/derivazione_inf_albero_mult.png Graphic file (type png)
 <use ./images/derivazione_inf_albero_mult.png>
 Package pdftex.def Info: ./images/derivazione_inf_albero_mult.png  used on inpu
-t line 328.
+t line 395.
 (pdftex.def)             Requested size: 269.44075pt x 120.31734pt.
-[11 <./images/albero_A_w.png (PNG copy)> <./images/derivazione_inf_albero_mult.
-png (PNG copy)>]
-Overfull \hbox (23.37634pt too wide) in paragraph at lines 336--337
+
+Overfull \hbox (23.37634pt too wide) in paragraph at lines 403--404
 \OT1/cmr/m/n/10.95 pro-dot-ti dei sot-toal-be-ri, con-ca-te-na-ti da si-ni-stra
  a de-stra. la strin-ga ^^Re $\OML/cmm/m/it/10.95 w[]; w[]; :::; w[]$
  []
 
-[12] (./LC.aux) ) 
+[15 <./images/derivazione_inf_albero_mult.png (PNG copy)>] (./LC.aux) ) 
 Here is how much of TeX's memory you used:
- 14404 strings out of 492609
- 281887 string characters out of 6131461
- 332544 words of memory out of 5000000
- 18017 multiletter control sequences out of 15000+600000
+ 14736 strings out of 492609
+ 287591 string characters out of 6131461
+ 341168 words of memory out of 5000000
+ 18344 multiletter control sequences out of 15000+600000
  14229 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,15n,72p,787b,1191s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb>
-Output written on LC.pdf (12 pages, 263167 bytes).
+ 55i,15n,72p,787b,1194s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on LC.pdf (15 pages, 280670 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 120 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

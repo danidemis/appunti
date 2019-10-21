@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.8)  18 OCT 2019 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.17)  21 OCT 2019 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -368,7 +368,7 @@ Overfull \hbox (18.81575pt too wide) in paragraph at lines 131--132
 [7 <./images/UNIX-process.png>] (./sistemiOP.aux) ) 
 Here is how much of TeX's memory you used:
  3888 strings out of 492609
- 50454 string characters out of 6131462
+ 50454 string characters out of 6131461
  135409 words of memory out of 5000000
  7730 multiletter control sequences out of 15000+600000
  12005 words of font info for 45 fonts, out of 8000000 for 9000
