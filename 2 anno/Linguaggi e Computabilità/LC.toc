@@ -1,26 +1,26 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {part}{I\hspace {1em}Prima Parte}{1}% 
-\contentsline {section}{\numberline {1}Alfabeti e Linguaggi}{1}% 
-\contentsline {subsection}{\numberline {1.1}Stringhe}{2}% 
-\contentsline {subsection}{\numberline {1.2}Alfabeti}{2}% 
-\contentsline {paragraph}{Potenza di un alfabeto}{2}% 
-\contentsline {paragraph}{Chiusura di Kleene}{3}% 
-\contentsline {subsection}{\numberline {1.3}Linguaggio}{3}% 
-\contentsline {paragraph}{Concatenazione di linguaggi}{4}% 
-\contentsline {subsection}{\numberline {1.4}Grammatiche}{4}% 
-\contentsline {subsubsection}{\numberline {1.4.1}Grammatica libere dal contesto}{4}% 
-\contentsline {paragraph}{Stringhe palindrome}{5}% 
-\contentsline {subsubsection}{\numberline {1.4.2}Grammatiche regolari}{7}% 
-\contentsline {paragraph}{\textbf {Base}:}{8}% 
-\contentsline {paragraph}{\textbf {Induzione}:}{8}% 
-\contentsline {subparagraph}{Esempio 1}{8}% 
-\contentsline {subparagraph}{Esempio 2}{8}% 
-\contentsline {subsection}{\numberline {1.5}Ambiguità nelle grammatiche e nei linguaggi}{9}% 
-\contentsline {subsubsection}{\numberline {1.5.1}Grammatiche ambigue}{10}% 
-\contentsline {subsubsection}{\numberline {1.5.2}Eliminare le ambiguità da una grammatica}{10}% 
-\contentsline {paragraph}{Derivazioni a sinistra per esprimere ambiguità}{12}% 
-\contentsline {paragraph}{Dimostrazione}{12}% 
-\contentsline {subsubsection}{\numberline {1.5.3}Ambiguità inerente}{12}% 
-\contentsline {section}{\numberline {2}Alberi Sintattici}{13}% 
-\contentsline {subsubsection}{\numberline {2.0.1}Inferenza, derivazioni e alberi sintattici}{14}% 
+\contentsline {part}{I\hspace {1em}Prima Parte}{3}% 
+\contentsline {section}{\numberline {1}Alfabeti e Linguaggi}{3}% 
+\contentsline {subsection}{\numberline {1.1}Stringhe}{3}% 
+\contentsline {subsection}{\numberline {1.2}Alfabeti}{4}% 
+\contentsline {paragraph}{Potenza di un alfabeto}{4}% 
+\contentsline {paragraph}{Chiusura di Kleene}{4}% 
+\contentsline {subsection}{\numberline {1.3}Linguaggio}{4}% 
+\contentsline {paragraph}{Concatenazione di linguaggi}{5}% 
+\contentsline {subsection}{\numberline {1.4}Grammatiche}{5}% 
+\contentsline {subsubsection}{\numberline {1.4.1}Grammatica libere dal contesto}{6}% 
+\contentsline {paragraph}{Stringhe palindrome}{6}% 
+\contentsline {subsubsection}{\numberline {1.4.2}Grammatiche regolari}{8}% 
+\contentsline {paragraph}{\textbf {Base}:}{9}% 
+\contentsline {paragraph}{\textbf {Induzione}:}{9}% 
+\contentsline {subparagraph}{Esempio 1}{9}% 
+\contentsline {subparagraph}{Esempio 2}{9}% 
+\contentsline {subsection}{\numberline {1.5}Ambiguità nelle grammatiche e nei linguaggi}{10}% 
+\contentsline {subsubsection}{\numberline {1.5.1}Grammatiche ambigue}{11}% 
+\contentsline {subsubsection}{\numberline {1.5.2}Eliminare le ambiguità da una grammatica}{11}% 
+\contentsline {paragraph}{Derivazioni a sinistra per esprimere ambiguità}{13}% 
+\contentsline {paragraph}{Dimostrazione}{13}% 
+\contentsline {subsubsection}{\numberline {1.5.3}Ambiguità inerente}{13}% 
+\contentsline {section}{\numberline {2}Alberi Sintattici}{14}% 
+\contentsline {subsubsection}{\numberline {2.0.1}Inferenza, derivazioni e alberi sintattici}{15}% 
