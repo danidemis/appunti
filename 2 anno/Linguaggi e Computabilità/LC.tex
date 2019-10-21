@@ -134,8 +134,8 @@ La descrizione grammaticale di un linguaggio consiste di quattro componenti:
 		\item Una stringa di zero o più terminali e variabili. detta il \textbf{corpo} della produzione, il quale rappresenta un modo di formare le stringhe nel linguaggo della variabile di testa. 
 	\end{itemize}
 \end{enumerate}
-\subsubsection{Grammatica libere dal contesto -CFG-}
-Una grammatica context-free è una grammatica che non prevede l'incrocio dei simboli terminali per cui è necessario utilizzare delle regole differenti. Possiamo rappresentare una CFG per mezzo dei quattro componenti descritti sopra, ossia $G=(V,T,P,S)$, dove $V$ è l'insieme delle variabili, $T$ i terminali, $P$ l'insieme delle produzioni ed $S$ il simbolo iniziale.
+\subsubsection{Grammatica libere dal contesto}
+Una grammatica context-free (CFG, Context Free Grammatic) è una grammatica che non prevede l'incrocio dei simboli terminali per cui è necessario utilizzare delle regole differenti. Possiamo rappresentare una CFG per mezzo dei quattro componenti descritti sopra, ossia $G=(V,T,P,S)$, dove $V$ è l'insieme delle variabili, $T$ i terminali, $P$ l'insieme delle produzioni ed $S$ il simbolo iniziale.
 \\ \\
 \paragraph{Stringhe palindrome}: le stringhe palindrome sono un esempio semplice di linguaggio che utilizza una grammatica context-free.
 Abbiamo il l'alfabeto $E = \{0,1\}$ e il linguaggio costruito su esso $L_{pal} \subseteq E^{\star}$. Da questo alfabeto e con questo linguaggio possiamo costruire una stringa w palondroma come $$w = \{0110\}$$
@@ -214,8 +214,33 @@ L'altro metodo, quello per \textit{derivazione} prevede invece l'uso delle \text
 Per ricavare la stringa abbiamo utilizzato una \textit{derivazione sinistra}, ma avremmo potuto eseguire la \textit{derivazione destra} e il risultato sarebbe stato il medesimo. Infatti, \textit{qualunque derivazione ha una derivazione a sinistra e una a destra \textbf{equivalenti}}. Eseguire una derivazione destra significa infatti applicare la derivazione prima all'elemento più a destra, fino ad arrivare a quello più a sinistra una volta risolta la derivazione.
 \\ \\
 \subsubsection{Grammatiche regolari}
-Il linguaggio di esempio (di tipo 2): $L = \{w \in \{a,b,c\}^{\star} | w = a^nb^nc^n, n\geq 1\}$
-è generato dalla seguente grammatica (NON context-free): $$ G=(\{S,X,B,C\}, \{a,b,c\}, P, S)$$
+Le espressioni regolari determinano un linguaggio regolare. Esse hanno definizione ricorsiva per induzione. Da ora in avanti faremo riferimento alle Espressioni Regolari con ER.
+Possiamo definirle tramite queste regole induttive:
+\paragraph{\textbf{Base}:}
+\begin{enumerate}
+	\item $\varepsilon , \emptyset$ sono ER: $L(\varepsilon ) = \{\varepsilon\}, L(\emptyset ) = \emptyset$.
+	\item Se $a \in E$, $a$ è una ER: $L(a) = \{a\}$.
+	\item Variabili che rappresentano linguaggi (ad esempio $L$) sono ER.
+\end{enumerate}
+\paragraph{\textbf{Induzione}:}
+\begin{enumerate}
+	\item UNIONE: Se $E,F$ sono ER, allora anche $E+F$ è una ER; $L(E+F) = L(E) \cup L(F)$.
+	\item CONCATENAZIONE: Se $E,F$ sono ER, allora anche $E*F$ è una ER; $L(E*F) = L(E) * L(F)$.
+	\item CHIUSURA: Se $E$ è una ER, allora anche $E^*$ è una ER.
+	\item PARENTESI: Se $E$ è una ER, allora anche $(E)$ è una ER; $L((E))=L(E)$.
+\end{enumerate}
+
+\subparagraph{Esempio 1} Prendiamo il linguaggio $L = \{w \in \{0,1\}^* \: | \: w \: contiene \: 0 \: e \: 1 \: alternati\}$. Allora abbiamo ad esempio:
+\begin{itemize}
+	\item $L(0,1) = \{0 \: 1\}$
+	\item $L(0,1)^* = \{0 \: 1\}^* = \{\varepsilon , 01, 0101, 010101, ...\}$
+	\item $L(1,0)^* = \{1 \: 0\}^* = \{\varepsilon , 10, 1010, 101010, ...\}$
+	\item $L(0(10)^* ) = \{0, 010, 01010, ...\}$
+	\item $L(1(01)^* ) = \{1, 101, 10101, ...\}$
+\end{itemize}
+
+\subparagraph{Esempio 2}(G di tipo 2): $L = \{w \in \{a,b,c\}^{\star} | w = a^nb^nc^n, n\geq 1\}$
+è generato dalla seguente grammatica (non context-free): $$ G=(\{S,X,B,C\}, \{a,b,c\}, P, S)$$
 e dove le regole di produzione sono:
 \begin{enumerate}
 	\item $S \rightarrow aSBC$
@@ -249,8 +274,6 @@ In generale, per derivare $a^nb^nc^n$, per n $<$ 1:
 S(n-1 \medspace volte \rightarrow (1)) a^{n-1}S(BC)^{n-1}\rightarrow (2) a^n(BC)^n(n(n-1)/2 \medspace volte \medspace la \\&\\ sequenza \rightarrow (3), \rightarrow (4), \rightarrow (5))a^nB^nC^n....slide
 \end{split}
 \end{equation*}
-
-Esercizio: creo una CFG su $L = \{a^{n+m}xc^nyd^m, \medspace con n,m \geq 0\}$:
 
 \subsection{Ambiguità nelle grammatiche e nei linguaggi}
 Fino ad ora abbiamo implicitamente ipotizzato che una grammatica associ in modo univoco una struttura a ogni stringa del linguaggio. Non sempre è così. 

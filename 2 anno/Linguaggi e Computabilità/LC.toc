@@ -9,14 +9,18 @@
 \contentsline {subsection}{\numberline {1.3}Linguaggio}{3}% 
 \contentsline {paragraph}{Concatenazione di linguaggi}{4}% 
 \contentsline {subsection}{\numberline {1.4}Grammatiche}{4}% 
-\contentsline {subsubsection}{\numberline {1.4.1}Grammatica libere dal contesto -CFG-}{4}% 
+\contentsline {subsubsection}{\numberline {1.4.1}Grammatica libere dal contesto}{4}% 
 \contentsline {paragraph}{Stringhe palindrome}{5}% 
 \contentsline {subsubsection}{\numberline {1.4.2}Grammatiche regolari}{7}% 
-\contentsline {subsection}{\numberline {1.5}Ambiguit\IeC {\`a} nelle grammatiche e nei linguaggi}{9}% 
-\contentsline {subsubsection}{\numberline {1.5.1}Grammatiche ambigue}{9}% 
-\contentsline {subsubsection}{\numberline {1.5.2}Eliminare le ambiguit\IeC {\`a} da una grammatica}{9}% 
-\contentsline {paragraph}{Derivazioni a sinistra per esprimere ambiguit\IeC {\`a}}{11}% 
-\contentsline {paragraph}{Dimostrazione}{11}% 
-\contentsline {subsubsection}{\numberline {1.5.3}Ambiguit\IeC {\`a} inerente}{11}% 
-\contentsline {section}{\numberline {2}Alberi Sintattici}{12}% 
-\contentsline {subsubsection}{\numberline {2.0.1}Inferenza, derivazioni e alberi sintattici}{13}% 
+\contentsline {paragraph}{\textbf {Base}:}{8}% 
+\contentsline {paragraph}{\textbf {Induzione}:}{8}% 
+\contentsline {subparagraph}{Esempio 1}{8}% 
+\contentsline {subparagraph}{Esempio 2}{8}% 
+\contentsline {subsection}{\numberline {1.5}Ambiguità nelle grammatiche e nei linguaggi}{9}% 
+\contentsline {subsubsection}{\numberline {1.5.1}Grammatiche ambigue}{10}% 
+\contentsline {subsubsection}{\numberline {1.5.2}Eliminare le ambiguità da una grammatica}{10}% 
+\contentsline {paragraph}{Derivazioni a sinistra per esprimere ambiguità}{12}% 
+\contentsline {paragraph}{Dimostrazione}{12}% 
+\contentsline {subsubsection}{\numberline {1.5.3}Ambiguità inerente}{12}% 
+\contentsline {section}{\numberline {2}Alberi Sintattici}{13}% 
+\contentsline {subsubsection}{\numberline {2.0.1}Inferenza, derivazioni e alberi sintattici}{14}% 
