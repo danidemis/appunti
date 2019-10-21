@@ -212,7 +212,7 @@ L'altro metodo, quello per \textit{derivazione} prevede invece l'uso delle \text
 \end{flalign*}
 
 Per ricavare la stringa abbiamo utilizzato una \textit{derivazione sinistra}, ma avremmo potuto eseguire la \textit{derivazione destra} e il risultato sarebbe stato il medesimo. Infatti, \textit{qualunque derivazione ha una derivazione a sinistra e una a destra \textbf{equivalenti}}. Eseguire una derivazione destra significa infatti applicare la derivazione prima all'elemento più a destra, fino ad arrivare a quello più a sinistra una volta risolta la derivazione.
-
+\\ \\
 \subsubsection{Grammatiche regolari}
 Il linguaggio di esempio (di tipo 2): $L = \{w \in \{a,b,c\}^{\star} | w = a^nb^nc^n, n\geq 1\}$
 è generato dalla seguente grammatica (NON context-free): $$ G=(\{S,X,B,C\}, \{a,b,c\}, P, S)$$
@@ -303,19 +303,24 @@ Per ogni grammatica $G=(V,T,P,S)$ e per ogni stringa $w$ in $T^*$, $w$ ha due al
 \end{ambiguitaSinistra}
 
 \paragraph{Dimostrazione} (Solo se) Esaminiamo la costruzione di una derivazione a sinistra a partire da un albero sintattico. Possiamo osservare che in corrispondenza di un nodo in cui gli alberi applicano produzioni diverse, anche le due derivazioni a sinistra applicano due produzioni diverse, e sono perciò distinte.
-
+\\ \\
 \subsubsection{Ambiguità inerente}
  Un linguaggio $L$ CFG si dice \textbf{inerentemente ambiguo} se tutte le sue grammatiche sono ambigue. Se anche solo una grammatica per $L$ non è ambigua, allora $L$ non è ambiguo. Anche se, per esempio, presa la stringa $a*a+a$ vista precedentemente, possiamo dire che esiste per essa una grammatica non ambigua.
  
  Infatti, la grammatica definita come
  \begin{enumerate}
- 	\item $I \rightarrow a|b|Ia|Ib|I0|I1$
- 	\item $F \rightarrow I|(E)$
- 	\item $T \rightarrow F | T*F$
- 	\item $E \rightarrow T|E+T$
+ 	\item $I \rightarrow a\medspace |\medspace b\medspace |\medspace Ia\medspace |\medspace Ib\medspace |\medspace I0\medspace |\medspace I1$
+ 	\item $F \rightarrow I\medspace |\medspace (E)$
+ 	\item $T \rightarrow F \medspace | \medspace T*F$
+ 	\item $E \rightarrow T\medspace |\medspace E+T$
 \end{enumerate}
 genera la stringa $a*a+a$ in modo non ambiguo con la seguente derivazione:
-  
+
+\begin{figure}[H]
+\caption{Albero sintattico per $a+a*a$ da una grammatica non ambigua}
+\includegraphics[scale=0.5]{albero_non_ambiguo_1.png}
+\centering
+\end{figure}  
 
 \section{Alberi Sintattici}
 Un albero sintattico è una rappresentazione grafica (ad albero) che mostra come una forma sentenziale o una stringa è stata ottenuta tramite le regole di derivazione.
