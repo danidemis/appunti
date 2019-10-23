@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  23 OCT 2019 09:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  23 OCT 2019 10:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -783,45 +783,50 @@ Overfull \hbox (30.66536pt too wide) in paragraph at lines 370--372
  [][] 
  []
 
-[11] [12 <./images/cut-albero-derivazioni.png>]
-Overfull \hbox (1.37117pt too wide) in paragraph at lines 388--390
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 374--378
+
+ []
+
+[12 <./images/cut-albero-derivazioni.png>]
+Overfull \hbox (1.37117pt too wide) in paragraph at lines 394--396
 []\T1/futs/m/n/10.95 Il co-man-do con-sult ap-pa-re co-me un pre-di-ca-to da va
 -lu-ta-re (un goal) e pren-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--400
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 419--423
+Underfull \hbox (badness 10000) in paragraph at lines 425--429
 
  []
 
 
-Overfull \hbox (0.19797pt too wide) in paragraph at lines 423--424
+Overfull \hbox (0.19797pt too wide) in paragraph at lines 429--430
 []\T1/futs/m/n/10.95 SUCCESS: vie-ne ge-ne-ra-ta la clau-so-la vuo-ta, ov-ve-ro
  se per fi-ni-to, $\FML/futmi/m/it/10.95 G[]$ \T1/futs/m/n/10.95 è ugua-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--438
+Underfull \hbox (badness 10000) in paragraph at lines 439--444
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 468--474
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 474--480
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 487--491
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--497
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 504--510
+Underfull \hbox (badness 10000) in paragraph at lines 510--516
 
  []
 
@@ -845,7 +850,7 @@ onts/symbols/msam10.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe
 ia/putbi8a.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/p
 utr8a.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putri8
 a.pfb>
-Output written on LP.pdf (18 pages, 157984 bytes).
+Output written on LP.pdf (18 pages, 158658 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream

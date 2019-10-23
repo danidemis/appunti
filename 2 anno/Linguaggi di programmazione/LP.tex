@@ -372,6 +372,12 @@ Qui di seguito è proposto un esempio di goal e di clausole contenente il \texti
 \end{figure}
 
 Nella figura si può notare il percorso di dimostrazione che l'interprete Prolog segue. Si può anche notare che tra i percorsi "tagliati" fuori dal risultato (quelli posti dopo il pallino blu nel collegamento tra padre e figlio) c'è pure l'unico \textbf{successo} possibile della query rispetto alle clausole di programma. In questo caso infatti possiamo dire che il \textit{cut} ha escluso la soluzione dai risultati.
+\\ \\
+Possiamo anche distinguere tra due tipi di \textit{cut}, o meglio, tra due utilizzi del cut:
+\begin{itemize}
+	\item \color{green} Green Cuts\color{black}: utili per esprimere "determinismo" (e quindi per rendere più efficiente il programma).
+	\item \color{red} Red Cuts\color{black}:usati per soli scopi di efficienza, hanno come caratteristica principale quella di omettere alcune condizioni esplicite in un programma e, \textit{soprattutto}, quella di modificare la semantica del programma equivalente senza \textit{cuts}. Questo utilizzo è considerato generalmente sbagliato, anche se in alcuni casi può rivelarsi utile.
+\end{itemize}
 
 \subsection{L'interprete Prolog: interrogazioni}
 Una volta che le regole e i fatti sono stati "caricati" nell'interprete, eseguire un programma Prolog equivale a \textit{interrogare} l'\textbf{interprete}. Una volta fatto partire, l'interprete Prolog ci presenta un prompt così:
