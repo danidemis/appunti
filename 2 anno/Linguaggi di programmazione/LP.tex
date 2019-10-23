@@ -8,9 +8,11 @@
 \usepackage{amsthm}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{enumitem}
 \usepackage{fourier} %per il simbolo di Attenzione!
 \usepackage{multirow} % Required for multirows
+\graphicspath{ {./images/} }
 
 \title{Linguaggi di Programmazione}
 \author{Daniele De Micheli}
@@ -331,6 +333,45 @@ L'operatore "\textbf{OR}" viene inserito in una regola con il carattere  \textit
 	\item ogni variabile DEVE iniziare con una MAIUSCOLA
 	\item i commenti si inseriscono dopo un "\%" (commento in linea) o tra '/*' e '*/' (come in altri linguaggi).
 \end{enumerate}
+
+\subsubsection{Modello di esecuzione}
+Come abbiamo già visto, il Prolog utilizza un'interpretazione dichiarativa. Per esempio, 
+\begin{equation}
+p:-q,r.
+\end{equation}
+si può leggere come "\textit{p è vero se sono veri q e r}".
+Abbiamo anche una interpretazione procedurale, in cui il problema $p$ viene scomposto nei sottoproblemi $q$ e $r$. In questa visione, un \textit{goal} può essere visto come una chiamata ad una procedura in cui la testa è l'intestazione mentre la parte destra è il corpo.
+
+\paragraph{Controllo di esecuzione} Come abbiamo abbiamo intuito, le clausole nel data base di un programma Prolog vengono considerate "da sinistra, verso destra" e "dall’alto al basso". Se un (sotto)goal fallisce, allora il dimostratore Prolog sceglie un'alternativa, scandendo "dall'alto verso il basso" la lista delle clausole (nella pratica, esegue in ordine le istruzioni che trova). 
+
+Per poter manipolare l'esecuzione, il Prolog dispone di un \textit{predicato} speciale, chiamato \color{red} cut \color{black} (\textit{taglio}, scritto con il solo simbolo esclamativo "!"). Le principali caratteristiche del \textbf{cut} sono le seguenti:
+\begin{itemize}
+	\item Il cut è molto complesso da interpretare (non ha un'interpretazione logica ma bensì procedurale);
+	\item La sua importanza non può essere sottovalutata; è un predicato potente, difficile da usare nel modo corretto e particolarmente utile se usato correttamente.
+	\item Per capire come funziona è necessario avere un'idea del funzionamento del dimostratore Prolog.
+\end{itemize}
+
+\paragraph{Il predicato cut '!'} Consideriamo la seguente clusola generica con \color{red}cut\color{black}:
+\begin{equation*}
+C= a:-b_1, b_2,...,b_k, \color{red}!\color{black}, b_{k+1}, ..., b_n
+\end{equation*}
+L'effetto del \textit{cut} è il seguente:
+\begin{itemize}
+	\item Se il goal corrente unifica con $a$ e $b_1,...,b_k$ hanno successo, allora il dimostratore si impegna inderogabilmente alla scelta di $C$ per dimostrare $G$.
+	\item Ogni clausola alternativa (successiva, in basso) per \textit{a} che unifica con \textit{G} viene ignorata.
+	\item Se un qualche $b_j$ con $j > k$ fallisse, il backtracking si fermerebbe al \textit{cut}. Le altre scelte per $b_i$ con $i \leqslant k$ sono di conseguenza rimosse dall'albero di derivazione.
+	\item Quando il backtracking raggiunge il \textit{cut}, allora il \textit{cut} fallisce e la ricerca procede dall'ultimo punto di scelta prima che \textit{G} scegliesse \textit{C}.
+\end{itemize}
+
+Qui di seguito è proposto un esempio di goal e di clausole contenente il \textit{cut} e di cui viene mostrato l'albero di derivazione.
+
+\begin{figure}[H]
+\label{Albero sintattico che mostra il funzionamento del predicato cut}
+\includegraphics[scale=0.35]{cut-albero-derivazioni.png}
+\centering
+\end{figure}
+
+Nella figura si può notare il percorso di dimostrazione che l'interprete Prolog segue. Si può anche notare che tra i percorsi "tagliati" fuori dal risultato (quelli posti dopo il pallino blu nel collegamento tra padre e figlio) c'è pure l'unico \textbf{successo} possibile della query rispetto alle clausole di programma. In questo caso infatti possiamo dire che il \textit{cut} ha escluso la soluzione dai risultati.
 
 \subsection{L'interprete Prolog: interrogazioni}
 Una volta che le regole e i fatti sono stati "caricati" nell'interprete, eseguire un programma Prolog equivale a \textit{interrogare} l'\textbf{interprete}. Una volta fatto partire, l'interprete Prolog ci presenta un prompt così:
