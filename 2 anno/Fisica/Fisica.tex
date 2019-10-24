@@ -11,6 +11,7 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{float}
+\usepackage{fourier} %per il simbolo di Attenzione!
 \usepackage[shortlabels]{enumitem}
 \graphicspath{ {./images/} }
 \usetikzlibrary{arrows}
@@ -156,7 +157,7 @@ v = \lim_{\Delta t \to 0} \dfrac{\Delta s}{\Delta t} = \dfrac{ds}{dt}
 \end{equation}
 in cui $ds$ e $dt$ sono rispettivamente lo spostamento e l'intervallo di tempo infinitesimali, ovvero molto prossimi allo zero.
 
-\subsection{Moto rettilineo uniforme}
+\subsubsection{Moto rettilineo uniforme}
 Il\textit{ moto rettilineo uniforme} (o MRU) è il moto che descrive un corpo che si muove lungo una retta a velocità costante nel tempo. Tale moto è descritto dalla \textit{legge oraria del moto rettilineo uniforme}.
 
 Passiamo subito ad un esempio pratico. Consideriamo un treno che viaggia da un punto $A$ a un punto $B$. Il moto del treno può essere descritto come quello di un punto materiale che si muove lungo una linea retta a velocità $\Delta \overrightarrow{v}$ costante.
@@ -169,6 +170,25 @@ Passiamo subito ad un esempio pratico. Consideriamo un treno che viaggia da un p
 \centering
 \end{figure}
 
+Per ricavare la legge oraria del moto rettilineo uniforme, riprendiamo la definizione di velocità istantanea, e in particolare la relazione che esprime lo spostamento infinitesimo in termini di velocità e intervallo di tempo infinitesimo \begin{equation*}
+ds = vdt
+\end{equation*}
+Se vogliamo ricavare lo spazio in funzione del tempo, dobbiamo risolvere un'equazione differenziale. Applichiamo ad entrambi i membri l'operatore di integrazione
+\begin{equation*}
+\int_{s_i}^{s} ds = \int_{t_i}^{t} vdt
+\end{equation*}
+Ricordandoci che la velocità è costante, possiamo portarla fuori dal segno di integrazione
+\begin{equation}
+\int_{s_i}^{s} ds = v\int_{t_i}^{t} dt
+\end{equation}
+e, calcolando i due integrali definiti otteniamo:
+\begin{equation*}
+s - s_i= v(t-t_i)
+\end{equation*}
+che, per $t_i = t_0 = 0$, abbiamo
+\begin{equation}
+s=vt +s_0
+\end{equation}
 Per quanto riguarda questo tipo di moto, possiamo introdurre una tabella che riassume le formule del moto per poi presentare qualche esempio.
 
 \begin{table}[H]
@@ -200,7 +220,44 @@ Dato che non sono presenti una posizione iniziale o un tempo iniziale, possiamo 
 s = vt + s_ 0 \Rightarrow v = \dfrac{s}{t} = \dfrac{4500}{150} = 30 m/s
 \end{equation*}
 
+\subparagraph{Esempio 2} Un ciclista ha subito una penalità e parte dopo gli altri ciclisti con un ritardo di 10 minuti. I ciclisti stanno viaggiando ad una velocità costante di 35 km/h. Dopo che distanza il ciclista con la penalità li raggiunge sapendo che quest'ultimo va ad una velocità costante di 42 km/h?
+\\ \\
+Soluzione: Convertiamo le velocità in unità di misura del S.I. ($35 km/h \rightarrow 9,72 m/S$, $42 km/h \rightarrow 11.67 m/S$). Il tempo di vantaggio $t_0$ è uguale a 600 s (10 minuti $\rightarrow$ 600 s), scriviamo $x_0$ la legge oraria del ciclista senza penalità e $x_1$ quella del ciclista con penalità.
+\begin{equation*}
+x_0 = vt + s_0; \qquad x_1 = vt
+\end{equation*}
+Sappiamo che $s_0 = v_1 * t_0 = 9.72 m/s * 600s = 5833.33 \medspace m$ e che $x_1$ deve essere uguale a $x_0$ per avere il momento in cui si incontrano. Avendo le due equazioni possiamo ricavare il momento in cui si incontrano mettendole a sistema:
+\begin{equation*}
+\begin{cases}
+	x_0 = v_1t + s_0 \\ x_0 = v_2t
+\end{cases}
+\Rightarrow \begin{cases} - \\ t = \dfrac{s_0}{v_2 - v_1} \end{cases}
+\end{equation*}
+Quindi sappiamo che il tempo è $t = \dfrac{s_0}{v_2 - v_1} = \dfrac{5833.33m}{1.95m/s} = 2991.45 s $.
+Ora non ci manca che utilizzare il tempo così ottenuto per inserirlo in una delle due leggi orarie:
+\begin{equation*}
+ x_0 = v_2 * t = 11.67m/s * 2991.45 s = 34910,22 m
+ \end{equation*} 
 
+
+\textbf{Osservazione:} \textit{Se si vuole avere conferma, basta inserire il tempo anche nella prima legge oraria e confrontare i due dati relativi alla distanza ottenuti. Se coincidono, allora è corretto.} 
+
+
+Per conferma utilizzo anche la legge oraria del ciclista senza penalità:
+\begin{equation*}
+ x_0 = v_2 * t + s_0 = 9.72m/s * 2991.45 s + 5833.33 = 34910,22 m
+ \end{equation*} 
+
+\subsection{Accelerazione e accelerazione media}
+L'accelerazione media è una grandezza \textit{vettoriale} ottenuta dal rapporto tra la velocità di un corpo in un intervallo di tempo e il tempo in cui avviene questa variazione. In parole povere è il rapporto tra velocità e tempo. Nel Sistema Internazionale, l'unità di misura dell'accelerazione è il "\textit{metro al secondo quadro}" $$a_m = \dfrac{\Delta v}{\Delta t} = \dfrac{\dfrac{m}{s}}{s}  = \dfrac{m}{s^2}$$.
+
+\paragraph{Accelerazione media}: è per definizione il rapporto tra la variazione di velocità e il tempo in cui avviene. La formula dell'accelerazione media è la seguente:
+\begin{equation}
+a_m = \dfrac{\Delta v}{\Delta t} = \dfrac{v_f -v_i}{t_f - t_i}
+\end{equation}
+dove con $\Delta v$ si intende la variazione di velocità e con $\Delta t$ la variazione di tempo.
+
+\textbf{Osservazioni:} l'accelerazione può essere \textit{positiva} (concorde) o \textit{negativa} (decelerazione). Se è positiva, vuol dire che il corpo sta incrementando la sua velocità; se è negativa, al contrario, vuol dire che il corpo sta perdendo velocità.
 \section{Dinamica}
 \section{Lavoro ed Energia}
 
