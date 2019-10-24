@@ -85,8 +85,97 @@ Lo \textit{spostamento} rappresenta, rispetto all'origine, di quando mi sono spo
 \centering
 \end{figure}
 
+Un'altra convenzione che dobbiamo prendere riguarda il modo in cui consideriamo un oggetto. Nella nostra realtà, considereremo un oggetto come un \textit{punto  materiale}, dotato di massa.
+
+\paragraph{Velocità media} Consideriamo uno spostamento $\Delta s$ e un intervallo di tempo $\Delta t$; definiamo la \textit{velocità media} come il rapporto tra lo spostamento e l'intervallo di tempo necessario affinché questo spostamento avvenga. In formula abbiamo che:
+\begin{equation}
+\label{EqVelocitàMedia}
+v_m = \dfrac{spostamento}{intervallo \medspace di \medspace tempo} = \dfrac{\Delta s}{\Delta t}
+\end{equation}
+
+\subparagraph{Differenza tra velocità media e velocità media scalare} Consideriamo un viaggio di andata e ritorno in auto. La partenza è Milano, si arriva a Como e successivamente si torna a Milano.  Il tempo per il viaggio di andata (e poi di ritorno) è di 30 minuti, per un totale di 1 ora.
+
+Se consideriamo la velocità media rispetto allo \textit{spostamento}, potremmo dire che $v_m = 0$, poiché lo spostamento totale risulta essere nullo. Difatti $v_m = \dfrac{0}{1} = 0 km/h$. Questo accade perchè come abbiamo già visto lo spostamento è la quantità di spazio percorsa rispetto all'origine (Milano). Partire da Milano e tornare a Milano implica uno spostamento nullo. 
+\\ \\
+Per quanto riguarda invece la velocità media rispetto alla \textit{distanza}, possiamo dire che si parla di \textit{velocità media scalare}. Difatti in questo caso, la distanza, rappresentata da uno scalare, rappresenta l'intero percorso tra Milano e Como e ancora Milano. Se l'andata Milano-Como è di 50 km, anche il ritorno è di 50 km e quindi in totale la distanza percorsa è di 100 km. In questo secondo caso possiamo allora dire che 
+$$v_m = \dfrac{distanza}{intervallo di tempo} \dfrac{100}{1} = 100 \medspace km/h$$
+
+In questo esempio abbiamo mostrato la differenza tra velocità media e velocità media scalare. Ora non ci resta che "sistemare" l'unità di misura. Infatti i km/h non sono l'unità di misura della velocità nel Sistema Internazionale. L'unità corretta è il "metro al secondo" (o m/s). La conversione tra una e l'altra è banale:
+
+\begin{flalign*}
+& \qquad \frac{km}{h} \rightarrow dividiamo \medspace per \medspace  3,6 \rightarrow \frac{m}{s} &&\\\nonumber
+& \qquad \frac{m}{s} \rightarrow moltiplichiamo \medspace per \medspace  3,6 \rightarrow \frac{km}{h}&&\nonumber
+\end{flalign*}
+
+
+\paragraph{Velocità istantanea} La velocità istantanea è una grandezza \textit{vettoriale} definita come la derivata della posizione di un corpo rispetto al tempo.
+
+Infatti, la velocità media non descrive in modo accurato il modo in cui un corpo si sta spostando: considerando sempre l'esempio di prima (Milano-Como-Milano), abbiamo calcolato la velocità media costante di 100 km/h, ma potrebbe benissimo essere che per i primi 15 minuti sono stato fermo, poi ho fatto 15 minuti a 200 km/h. La media risulta ancora 100 km/h, anche se di per se non è la stessa cosa che fare tutto il viaggio a 100 km/h.
+
+Per descrivere meglio come si sposta un oggetto nello spazio rispetto al tempo utilizziamo infatti quella che abbiamo definito come \textit{velocità istantanea}. Prendiamo quindi un grafico spazio/tempo che rappresenta uno spostamento da un punto A ad un punto B.
+
+\begin{figure}[H]
+\label{veloIst1}
+\includegraphics[scale=0.7]{velox_ist_1.png}
+\centering
+\end{figure}
+
+Il tempo $\Delta t$ rappresenta la differenza tra il tempo finale e il tempo iniziale, mentre $\Delta s$ rappresenta lo spostamento. Con la rappresentazione soprastante però, non abbiamo una descrizione precisa: come possiamo vedere dal grafico, sappiamo che il corpo si muove molto velocemente all'inizio, per poi fermarsi, tornare indietro, fermarsi di nuovo e poi avviarsi lentamente verso il punto B.
+
+La pendenza della retta che congiunge i due punti $A$ e $B$ (ovvero il suo coefficiente angolare) fornisce il valore della velocità media tenuta effettuando lo spostamento $\Delta s$ nel tempo $\Delta t$.
+\begin{equation*}
+m_{AB} = v_{m, AB} = \frac{\Delta s}{\Delta t}
+\end{equation*}
+
+Se a questo punto volessimo sapere in modo un po' più preciso come si sposta il corpo quando è vicino ad $A$, possiamo spostare $B$ più vicina ad essa. Prendiamo quindi un punto $B_1$ più vicino ad A tale che la sua velocità media risulta essere
+\begin{equation*}
+m_{AB'} = v_{m, AB'} = \frac{\Delta s'}{\Delta t'}
+\end{equation*}
+
+\begin{figure}[H]
+\label{veloIst2}
+\includegraphics[scale=0.7]{velox_ist_2.png}
+\centering
+\end{figure}
+
+Il nuovo valore di velocità è diverso da quello precedente, possiamo dire che rappresenta un intervallo minore e che quindi è un po' più preciso del precedente poiché descrive la velocità tra $A$ e $B'$. Possiamo notare anche che la pendenza della retta che passa per $A$ e $B'$ è più marcata.
+Prendiamo ora un altro punto, $B''$, ancora più vicino ad $A$.
+ \begin{figure}[H]
+ \label{veloIst3}
+ \includegraphics[scale=0.7]{velox_ist_3.png}
+ \centering
+ \end{figure}
+
+Potremmo ricalcolare anche qui la velocità e sarebbe ancora diversa, ancora più precisa nei pressi di $A$. Il concetto alla base è proprio questo; ad ogni passo in cui ci avviciniamo ad $A$, l'intervallo di tempo si riduce sempre di più. 
+
+Consideriamo allora un intervallo di tempo infinitesimale, \textit{prossimo allo zero}: vedremo che $B'''$ sarà in una posizione che quasi coincide con quella di $A$. Facendo questo notiamo che la retta che congiunge $A$ e $B'''$ non è più secante al grafico, ma diventa tangente ad esso. Quindi possiamo infine dedurre che la velocità istantanea non altro che la "pendenza" della tangente al grafico spazio-tempo in un punto.
+\\ \\ 
+Una definizione più formale di velocità istantanea è la seguente:
+\begin{equation}
+v = \lim_{\Delta t \to 0} \dfrac{\Delta s}{\Delta t} = \dfrac{ds}{dt}
+\end{equation}
+in cui $ds$ e $dt$ sono rispettivamente lo spostamento e l'intervallo di tempo infinitesimali, ovvero molto prossimi allo zero.
+
+\subsection{Moto rettilineo uniforme}
+Il\textit{ moto rettilineo uniforme} (o MRU) è il moto che descrive un corpo che si muove lungo una retta a velocità costante nel tempo. Tale moto è descritto dalla \textit{legge oraria del moto rettilineo uniforme}.
+
+Passiamo subito ad un esempio pratico. Consideriamo un treno che viaggia da un punto $A$ a un punto $B$. Il moto del treno può essere descritto come quello di un punto materiale che si muove lungo una linea retta a velocità $\Delta \overrightarrow{v}$ costante.
+
+\begin{figure}[H]
+\label{motoRettilineoUniformeA-B}
+
+\includegraphics[scale=0.7]{moto_ret_unif.png}
+\caption{Un moto rettilineo uniforme tra il punto A e il punto B}
+\centering
+\end{figure}
+
+Per quanto riguarda questo tipo di moto, possiamo introdurre una tabella che riassume le formule del moto per poi presentare qualche esempio.
+
+
+
 \section{Dinamica}
 \section{Lavoro ed Energia}
+
 
 Prendiamo un piano su cui poniamo una molla e un oggetto che si muove con velocità $v$ e con massa $m$.
 
