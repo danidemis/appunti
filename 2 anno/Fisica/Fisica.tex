@@ -258,14 +258,46 @@ a_m = \dfrac{\Delta v}{\Delta t} = \dfrac{v_f -v_i}{t_f - t_i}
 dove con $\Delta v$ si intende la variazione di velocità e con $\Delta t$ la variazione di tempo.
 
 \textbf{Osservazioni:} l'accelerazione può essere \textit{positiva} (concorde) o \textit{negativa} (decelerazione). Se è positiva, vuol dire che il corpo sta incrementando la sua velocità; se è negativa, al contrario, vuol dire che il corpo sta perdendo velocità.
+
+\paragraph{Accelerazione istantanea}: è una grandezza vettoriale definita come la derivata della velocità rispetto al tempo, la quale esprime la variazione di velocità di un corpo istante per istante.
+
+Per poter arrivare ad una definizione formale della accelerazione istantanea, possiamo iniziare con il disegnare un grafico velocità/tempo che rappresenta appunto l'accelerazione:
+
+\begin{figure}[H]
+\label{grafico1accIst}
+\includegraphics[scale=0.7]{accIst_1.png}
+\centering
+\end{figure}
+
+Prendiamo due punti, $A$ e $B$, presi a due istanti di tempo diversi. La pendenza della retta che congiunge $A$ e $B$ rappresenta l'accelerazione media tenuta nel tempo $\Delta t$.
+\begin{equation*}
+m_{AB} = a_{m,AB} = \dfrac{\Delta v}{\Delta t}
+\end{equation*}
+Analogamente a come abbiamo visto per la velocità istantanea, spostiamo il punto $B$ sul grafico un po' più vicino ad $A$, riducendo anche l'ampiezza dell'intervallo di tempo.
+\begin{figure}[H]
+\label{grafico2accIst}
+\includegraphics[scale=0.7]{accIst_2.png}
+\centering
+\end{figure}
+A questo punto, prendiamo un punto $B'''$ che quasi coincide con $A$. In questo modo, l'intervallo di tempo si riduce fino ad essere infinitesimale. Di conseguenza, come avevamo visto anche per la velocità, la retta che prima era secante al grafico, ora è tangente ad esso e il suo coefficiente angolare rappresenta l'accelerazione istantanea.
+\begin{figure}[H]
+\label{}
+\includegraphics[scale=0.7]{accIst_3.png}
+\centering
+\end{figure}
+Formalmente, quindi, un modo per descrivere l'accelerazione istantanea in un punto è il seguente:
+\begin{equation}
+a=\lim_{\Delta t \to 0} \dfrac{\Delta v}{\Delta t} = \dfrac{dv}{dt}
+\end{equation}
+dove con $dv$ e $dt$ intendiamo rispettivamente le variazioni infinitesime della velocità e del tempo.
+Un altro modo di vedere l'accelerazione istantanea è quello di descriverla come la derivata seconda della posizione rispetto al tempo al quadrato:
+\begin{equation}
+ a= \dfrac{dv}{dt}= \dfrac{d}{dt}\Bigg( \dfrac{ds}{dt}\Bigg) = \dfrac{d^2s}{dt^2}
+ \end{equation} 
+
+\subsubsection{Moto uniformemente accelerato}
 \section{Dinamica}
 \section{Lavoro ed Energia}
-
-
-Prendiamo un piano su cui poniamo una molla e un oggetto che si muove con velocità $v$ e con massa $m$.
-
-
-
 \section{Gravitazione}
 \part{Capitolo 2}
 \section{Fluidodinamica}

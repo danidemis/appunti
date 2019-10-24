@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  24 OCT 2019 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  24 OCT 2019 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1085,28 +1085,45 @@ ra del S.I. ($35\FML/futmi/m/it/10.95 km\T1/futs/m/n/10.95 /\FML/futmi/m/it/10.
 $\T1/futs/m/n/10.95 ,
  []
 
-[10] [11] [12] (./Fisica.aux) ) 
+[10]
+<./images/accIst_1.png, id=54, 376.40625pt x 240.14719pt>
+File: ./images/accIst_1.png Graphic file (type png)
+<use ./images/accIst_1.png>
+Package pdftex.def Info: ./images/accIst_1.png  used on input line 268.
+(pdftex.def)             Requested size: 263.48257pt x 168.10187pt.
+ [11 <./images/accIst_1.png>]
+<./images/accIst_2.png, id=59, 390.70969pt x 222.8325pt>
+File: ./images/accIst_2.png Graphic file (type png)
+<use ./images/accIst_2.png>
+Package pdftex.def Info: ./images/accIst_2.png  used on input line 279.
+(pdftex.def)             Requested size: 273.4949pt x 155.98167pt.
+<./images/accIst_3.png, id=60, 418.56375pt x 240.14719pt>
+File: ./images/accIst_3.png Graphic file (type png)
+<use ./images/accIst_3.png>
+Package pdftex.def Info: ./images/accIst_3.png  used on input line 285.
+(pdftex.def)             Requested size: 292.99261pt x 168.10187pt.
+ [12 <./images/accIst_2.png> <./images/accIst_3.png>] [13] (./Fisica.aux) ) 
 Here is how much of TeX's memory you used:
- 16008 strings out of 493281
- 303417 string characters out of 6146515
- 344385 words of memory out of 5000000
- 19814 multiletter control sequences out of 15000+600000
+ 16032 strings out of 493281
+ 303880 string characters out of 6146515
+ 344418 words of memory out of 5000000
+ 19835 multiletter control sequences out of 15000+600000
  92341 words of font info for 109 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  60i,14n,54p,791b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
-{l:/Programmi/texlive/2019/texmf-dist/fonts/enc/
-dvips/base/8r.enc}<l:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/four
-ier/fourier-mex.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/fo
-urier/fourier-ml.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/public/f
-ourier/fourier-ms.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/u
-topia/putb8a.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/utopia
-/putbi8a.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/put
-r8a.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putri8a.
-pfb>
-Output written on Fisica.pdf (12 pages, 184385 bytes).
+{l:/
+Programmi/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<l:/Programmi/tex
+live/2019/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb><l:/Programmi/t
+exlive/2019/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb><l:/Programmi/
+texlive/2019/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb><l:/Programmi
+/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb><l:/Programmi/texl
+ive/2019/texmf-dist/fonts/type1/adobe/utopia/putbi8a.pfb><l:/Programmi/texlive/
+2019/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb><l:/Programmi/texlive/2019/
+texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on Fisica.pdf (13 pages, 212702 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

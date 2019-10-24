@@ -16,11 +16,13 @@
 \contentsline {subparagraph}{Esempio 2}{10}% 
 \contentsline {subsection}{\numberline {2.2}Accelerazione e accelerazione media}{11}% 
 \contentsline {paragraph}{Accelerazione media}{11}% 
-\contentsline {section}{\numberline {3}Dinamica}{11}% 
-\contentsline {section}{\numberline {4}Lavoro ed Energia}{11}% 
-\contentsline {section}{\numberline {5}Gravitazione}{12}% 
-\contentsline {part}{II\hspace {1em}Capitolo 2}{12}% 
-\contentsline {section}{\numberline {6}Fluidodinamica}{12}% 
-\contentsline {section}{\numberline {7}Termodinamica}{12}% 
-\contentsline {section}{\numberline {8}Elettrostatica e Elettrotecnica}{12}% 
-\contentsline {section}{\numberline {9}Magnetismo}{12}% 
+\contentsline {paragraph}{Accelerazione istantanea}{11}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Moto uniformemente accelerato}{13}% 
+\contentsline {section}{\numberline {3}Dinamica}{13}% 
+\contentsline {section}{\numberline {4}Lavoro ed Energia}{13}% 
+\contentsline {section}{\numberline {5}Gravitazione}{13}% 
+\contentsline {part}{II\hspace {1em}Capitolo 2}{13}% 
+\contentsline {section}{\numberline {6}Fluidodinamica}{13}% 
+\contentsline {section}{\numberline {7}Termodinamica}{13}% 
+\contentsline {section}{\numberline {8}Elettrostatica e Elettrotecnica}{13}% 
+\contentsline {section}{\numberline {9}Magnetismo}{13}% 
