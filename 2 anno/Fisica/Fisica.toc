@@ -11,11 +11,13 @@
 \contentsline {subparagraph}{Differenza tra velocità media e velocità media scalare}{5}% 
 \contentsline {paragraph}{Velocità istantanea}{5}% 
 \contentsline {subsection}{\numberline {2.2}Moto rettilineo uniforme}{8}% 
-\contentsline {section}{\numberline {3}Dinamica}{9}% 
-\contentsline {section}{\numberline {4}Lavoro ed Energia}{9}% 
-\contentsline {section}{\numberline {5}Gravitazione}{9}% 
-\contentsline {part}{II\hspace {1em}Capitolo 2}{9}% 
-\contentsline {section}{\numberline {6}Fluidodinamica}{9}% 
-\contentsline {section}{\numberline {7}Termodinamica}{9}% 
-\contentsline {section}{\numberline {8}Elettrostatica e Elettrotecnica}{9}% 
-\contentsline {section}{\numberline {9}Magnetismo}{9}% 
+\contentsline {paragraph}{ESEMPI:}{9}% 
+\contentsline {subparagraph}{Esempio 1}{9}% 
+\contentsline {section}{\numberline {3}Dinamica}{10}% 
+\contentsline {section}{\numberline {4}Lavoro ed Energia}{10}% 
+\contentsline {section}{\numberline {5}Gravitazione}{10}% 
+\contentsline {part}{II\hspace {1em}Capitolo 2}{10}% 
+\contentsline {section}{\numberline {6}Fluidodinamica}{10}% 
+\contentsline {section}{\numberline {7}Termodinamica}{10}% 
+\contentsline {section}{\numberline {8}Elettrostatica e Elettrotecnica}{10}% 
+\contentsline {section}{\numberline {9}Magnetismo}{10}% 

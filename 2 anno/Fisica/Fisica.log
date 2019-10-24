@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  24 OCT 2019 10:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  24 OCT 2019 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,7 +671,12 @@ File: ./images/moto_ret_unif.png Graphic file (type png)
 <use ./images/moto_ret_unif.png>
 Package pdftex.def Info: ./images/moto_ret_unif.png  used on input line 167.
 (pdftex.def)             Requested size: 342.52734pt x 148.0772pt.
-[8 <./images/moto_ret_unif.png>] [9] (./Fisica.aux) ) 
+[8 <./images/moto_ret_unif.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
+
+ []
+
+[9] [10] (./Fisica.aux) ) 
 Here is how much of TeX's memory you used:
  14910 strings out of 493281
  289364 string characters out of 6146515
@@ -680,24 +685,24 @@ Here is how much of TeX's memory you used:
  12364 words of font info for 46 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  60i,14n,54p,791b,306s stack positions out of 5000i,500n,10000p,200000b,80000s
-<l:/Programmi/texlive/2019
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><l:/Programmi/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><l:/Programmi/texlive/20
-19/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><l:/Programmi/texlive
-/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><l:/Programmi/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><l:/Programmi/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><l:/Programmi/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><l:/Programmi/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><l:/Programmi/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><l:/Programmi/texlive
-/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><l:/Programmi/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><l:/Programmi/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><l:/Programmi/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Fisica.pdf (9 pages, 249408 bytes).
+<l:/Programmi/texlive/2019/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx10.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbxti10.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr17.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb><l:/Programmi/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti10.pfb>
+Output written on Fisica.pdf (10 pages, 251417 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
