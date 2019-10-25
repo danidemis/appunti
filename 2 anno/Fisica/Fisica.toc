@@ -6,10 +6,10 @@
 \contentsline {subsection}{\numberline {1.2}Grandezze Scalari e Vettoriali}{3}% 
 \contentsline {paragraph}{Sistema di riferimento}{4}% 
 \contentsline {section}{\numberline {2}Cinematica}{4}% 
-\contentsline {subsection}{\numberline {2.1}Velocità media e istantanea}{4}% 
-\contentsline {paragraph}{Velocità media}{5}% 
-\contentsline {subparagraph}{Differenza tra velocità media e velocità media scalare}{5}% 
-\contentsline {paragraph}{Velocità istantanea}{5}% 
+\contentsline {subsection}{\numberline {2.1}Velocit\IeC {\`a} media e istantanea}{4}% 
+\contentsline {paragraph}{Velocit\IeC {\`a} media}{5}% 
+\contentsline {subparagraph}{Differenza tra velocit\IeC {\`a} media e velocit\IeC {\`a} media scalare}{5}% 
+\contentsline {paragraph}{Velocit\IeC {\`a} istantanea}{5}% 
 \contentsline {subsubsection}{\numberline {2.1.1}Moto rettilineo uniforme}{8}% 
 \contentsline {paragraph}{ESEMPI:}{9}% 
 \contentsline {subparagraph}{Esempio 1}{9}% 
@@ -18,11 +18,11 @@
 \contentsline {paragraph}{Accelerazione media}{11}% 
 \contentsline {paragraph}{Accelerazione istantanea}{11}% 
 \contentsline {subsubsection}{\numberline {2.2.1}Moto uniformemente accelerato}{13}% 
-\contentsline {section}{\numberline {3}Dinamica}{13}% 
-\contentsline {section}{\numberline {4}Lavoro ed Energia}{13}% 
-\contentsline {section}{\numberline {5}Gravitazione}{13}% 
-\contentsline {part}{II\hspace {1em}Capitolo 2}{13}% 
-\contentsline {section}{\numberline {6}Fluidodinamica}{13}% 
-\contentsline {section}{\numberline {7}Termodinamica}{13}% 
-\contentsline {section}{\numberline {8}Elettrostatica e Elettrotecnica}{13}% 
-\contentsline {section}{\numberline {9}Magnetismo}{13}% 
+\contentsline {section}{\numberline {3}Dinamica}{14}% 
+\contentsline {section}{\numberline {4}Lavoro ed Energia}{14}% 
+\contentsline {section}{\numberline {5}Gravitazione}{14}% 
+\contentsline {part}{II\hspace {1em}Capitolo 2}{14}% 
+\contentsline {section}{\numberline {6}Fluidodinamica}{14}% 
+\contentsline {section}{\numberline {7}Termodinamica}{14}% 
+\contentsline {section}{\numberline {8}Elettrostatica e Elettrotecnica}{14}% 
+\contentsline {section}{\numberline {9}Magnetismo}{14}% 

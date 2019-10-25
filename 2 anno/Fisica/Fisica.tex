@@ -297,6 +297,49 @@ Un altro modo di vedere l'accelerazione istantanea è quello di descriverla come
  \end{equation} 
 
 \subsubsection{Moto uniformemente accelerato}
+Il moto uniformemente allcelerato (o MUA) è un tipo di moto in cui il corpo si muove con accelerazione costante. Se esso si muove lungo una retta allora il suo moto è caratterizzato dalla \textit{legge oraria del moto rettilineo uniformememnte accelerato}.
+
+L'accelerazione è, come già abbiamo visto, la derivata della velocità rispetto al tempo. Accelerazione media e istantanea coincidono nel MRUA, quindi possiamo parlare di accelerazione media:
+\begin{equation}
+a=\dfrac{\Delta v}{\Delta t} = \dfrac{v-v_i}{t-t_i}
+\end{equation}
+Invertiamo l'equazione isolando v:
+\begin{equation}
+v-v_i = a(t-t_i) \Rightarrow v=a(t-t_i)+v_i \Rightarrow v=at + v_0
+\end{equation}
+ottenendo così la prima formula del moto uniformemente accelerato. 
+Sappiamo però anche che l'accelerazione istantanea può essere vista come la derivata dello spazio rispetto al tempo:
+\begin{equation}
+v = \dfrac{ds}{dt} \rightarrow \dfrac{ds}{dt} = v_0 +at
+\end{equation}
+Ora interpretiamo quest'ultima equazione come un'equazione differenziale a variabili separabili.
+\begin{equation}
+ds = (v_0 + at)dt
+\end{equation}
+e integriamo, considerando anche qua $t_0 = 0$:
+\begin{flalign*}
+& \int_{s_0}^s ds = \int_{0}^{t} (v_0 + at)dt &&\\\nonumber
+& \int_{s_0}^s ds = v_0 \int_{0}^{t} dt + a \int_{0}^{t}t dt &&\nonumber
+\end{flalign*}
+da cui 
+\begin{equation}
+ s-s_0 = v_0t + \dfrac{1}{2}at^2 \rightarrow s=\dfrac{1}{2}at^2+v_0t+s_0
+ \end{equation} 
+ che è esattamente la legge oraria del moto uniformemente accelerato.
+\\ \\
+Di seguito una tabella che riassume le formule utili per il MUA:
+\begin{table}[H]
+\begin{tabular}{l|l}
+
+\textbackslash{}                            & Accelerazione costante           \\ \hline
+Velocità									&
+$v = v_i + a(t-t_i)$				\\ \hline
+Legge oraria                                & $s=\dfrac{1}{2} a(t-t_i)^2 + v_i (t-t_i) + s_i$          \\ \hline
+Velocità con istante iniziale $t_0 = 0$ & $v=v_0 +at$                \\ \hline
+Legge oraria con istante iniziale $t_0 = 0$ & $s=\dfrac{1}{2}at^2 +v_0t +s_0$                \\ \hline
+Equazione senza il tempo                                       & $v^2 = v_{0}^2+2a(s-s_0)$ \\ 
+\end{tabular}
+\end{table}
 \section{Dinamica}
 \section{Lavoro ed Energia}
 \section{Gravitazione}
