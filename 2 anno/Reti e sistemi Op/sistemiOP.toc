@@ -1,11 +1,28 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
 \contentsline {part}{I\hspace {1em}Prima parte}{1}% 
-\contentsline {section}{\numberline {1}Processi}{1}% 
-\contentsline {subsection}{\numberline {1.1}Concetto di processo}{1}% 
-\contentsline {subsubsection}{\numberline {1.1.1}Process Control Block}{3}% 
+\contentsline {section}{\numberline {1}Processi}{2}% 
+\contentsline {subsection}{\numberline {1.1}Concetto di processo}{2}% 
+\contentsline {subsubsection}{\numberline {1.1.1}Process Control Block}{4}% 
 \contentsline {subsubsection}{\numberline {1.1.2}Threads}{4}% 
-\contentsline {subsubsection}{\numberline {1.1.3}Scheduling dei processi}{4}% 
-\contentsline {paragraph}{Multitasking nei sistemi mobili}{6}% 
-\contentsline {subsection}{\numberline {1.2}Operazioni sui processi}{7}% 
-\contentsline {subsubsection}{\numberline {1.2.1}Creazione di processi}{7}% 
+\contentsline {subsubsection}{\numberline {1.1.3}Scheduling dei processi}{5}% 
+\contentsline {paragraph}{Multitasking nei sistemi mobili}{7}% 
+\contentsline {subsection}{\numberline {1.2}Operazioni sui processi}{8}% 
+\contentsline {subsubsection}{\numberline {1.2.1}Creazione di processi}{8}% 
+\contentsline {section}{\numberline {2}lezione mancante}{8}% 
+\contentsline {section}{\numberline {3}Scheduling della CPU}{8}% 
+\contentsline {subsection}{\numberline {3.1}Algoritmi di scheduling della CPU}{9}% 
+\contentsline {paragraph}{Concetti fondamentali}{9}% 
+\contentsline {paragraph}{Distribuzione delle durate dei burst della CPU}{9}% 
+\contentsline {paragraph}{Scheduler della CPU}{9}% 
+\contentsline {paragraph}{Dispatcher}{10}% 
+\contentsline {subsection}{\numberline {3.2}Criteri di scheduling}{11}% 
+\contentsline {subsection}{\numberline {3.3}Algoritmi}{11}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Scheduling in ordine di processo}{11}% 
+\contentsline {paragraph}{Vantaggio}{11}% 
+\contentsline {paragraph}{Svantaggio}{11}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Scheduling per brevità}{12}% 
+\contentsline {paragraph}{Vantaggio}{12}% 
+\contentsline {paragraph}{Svantaggio}{12}% 
+\contentsline {paragraph}{Idea:}{12}% 
+\contentsline {subsubsection}{\numberline {3.3.3}Scheduling circolare}{13}% 

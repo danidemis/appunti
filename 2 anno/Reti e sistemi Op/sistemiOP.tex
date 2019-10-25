@@ -6,6 +6,7 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{float}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
@@ -127,9 +128,126 @@ Di solito nei sistemi operativi i processi sono organizzati in maniera gerarchic
 Sistemi operativi diversi creano processi in modo diverso. Possono esistere diverse politiche di condivisione (padre e figlio condividono le risorse, solo alcune, nessuna), diverse politiche di creazione di spazio di indirizzi (il figlio è un duplicato del padre (stessa memoria e programma, oppure il figlio deve eseguire qualcos'altro) e ancora politiche di coordinazione padre/figli (il padre è sospeso finchè i figli non terminano, oppure eseguono in maniera concorrente).
 
 Esempio: sistema UNIX
-\begin{figure}[ht]
+\begin{figure}[H]
 \includegraphics[scale=0.8]{UNIX-process.png}
 \end{figure}
 
+\section{lezione mancante}
+
+\section{Scheduling della CPU}
+Simulazioni e modellazione lo devo fare io da E-Learning.
+\subsection{Algoritmi di scheduling della CPU}
+Come anche per il resto dell'informatica, non esiste un solo algoritmo per svolgere questo compito. Ogni algoritmo ha diverse strategie di azione, e una CPU utilizza in modo intelligente questi algoritmi combinandoli anche tra di loro.
+
+\paragraph{Concetti fondamentali}: lobiettivo della multiprograazione è massimizzare l'utilizzo della cpu. GLI ALGORITMI di scheduling sfruttano il fatto che di norma l'esecuzione di un processo è una sequenza di:
+\begin{itemize}
+	\item \textbf{Brust della CPU}:sequenza di operzaione di CPU.
+	\item \textbf{Brust dell'I/O}: attesa del completamento di operazione I/O.
+\end{itemize}
+Un'efficente distribuzione dei brust è essenziale per la CPU.
+\begin{figure}[H]
+\includegraphics[scale=0.4]{burst.png}
+\centering
+\end{figure}
+
+\paragraph{Distribuzione delle durate dei burst della CPU}
+guardo slide per foto
+
+\paragraph{Scheduler della CPU} Lo scheduler della CPU, o \textit{scheduler a breve termine}, seleziona un processo tra quelli nella ready queue (non per forza FIFO) ed alloca un core ad esso.
+I riassegnamenti della CPU possono essere effettuati  in diversi momenti:
+\begin{enumerate}
+	\item quando un processo passa da running a waiting.
+	\item qunado un processo passa da running a ready.
+	\item quando un processo passa da waiting a ready.
+	\item quando un processo termina.
+\end{enumerate}
+Non è detto che un sistema operativo faccia scheduling su tutte e quattro le situazioni.
+Se il riassegnamento viene fatto solo nelle situazioni 1 e 4, lo schema di scheduling è detto \textit{senza prelazione} (\textbf{nonpreemptive} o cooperativo, altrimenti è detto \textit{con prelazione} (\textbf{preemptive}.
+I processi cooperativi devono appunto collaborare: se volesse, un processo potrebbe tenersi il core occupato per tutto il tempo che desidera.
+Lo schema di scheduling preemptive è più complicato da implementare ma è anche più sicuro:
+\begin{itemize}
+	\item che succede se due processi condividono dei dati?
+	\item che succede se un processo sta eseguendo del codice in modalità kernel?
+	\item che succede se un processo sta eseguendo un gestore degli interrupt?
+\end{itemize}
+\paragraph{Dispatcher} Il dispatcher passa effettivamente (fisicamente) il controllo della CPU al processo scelto dallo scheduler a breve termine:
+\begin{itemize}
+	\item Effettua il csmbio di contesto.
+	\item Passa in modalità utente.
+	\item Salta nel punto corretto del programma del processo selezionato (ossia dove era stato interrotto il processo).
+\end{itemize}
+La \textbf{latenza di dispatch} è il tempo impegato dal dispatcher per fermare un processo ed avviarne un altro.
+\begin{figure}[H]
+\includegraphics[scale=0.6]{dispatchLatency.jpg}
+\centering
+\end{figure}
+
+\subsection{Criteri di scheduling}
+Misure che servono per confrontare le caratteristiche dei diversi algoritmi (notare che non dioendono solo dall'algoritmo, ma anche dak tipo di carico).
+I rincipali criteri sono:
+\begin{itemize}
+	\item \textbf{Utilizzo della CPU}: \% di tempo in cui la CPU è attiva (dovrebbe essere tra 40\% e il 90\% ).
+	\item \textbf{Throughout}: \# di processi che completano l'esecuzione nell'unità di tempo (dipende dalla durata dei processi).
+	\item \textbf{Tempo di completamento}: tempo necessario per completare l'esecuzione di un certo processo (dipende da molti fattori: durata del processo, carico totale...).
+	\item \textbf{Tempo di attesa}: tempo trascorso dal processo nella ready queue (meglio del tempo di compèletamento , meno dipendente dalla durata del processo e dell'I/O).
+	\item \textbf{tempo di risposta}: negli ambienti time-sharing, tempo trascorso tra l'arrivo di una richiesta al processo e la produzione della prima risposta, senza l'emissoine di questa nell'output.
+\end{itemize}
+
+\subsection{Algoritmi}
+\subsubsection{Scheduling in ordine di processo} Chiamato anche \textbf{first-come-first-served} (o FCFS): la CPU viene assegnata al primo processo che la richiede.
+\paragraph{Vantaggio}: è molto semplice da implementare (coda FIFO).
+\paragraph{Svantaggio}: tempo di attesa medio può essere lungo (effetto "convoglio").
+\begin{figure}[H]
+\includegraphics[scale=0.7]{FCFS.png}
+\centering
+\end{figure}
+Ma nella figura, scambiando l'ordine dei processi la situazione può cambiare molto. Quindi dipende molto dall'ordine in cui arrivano i processi.
+
+\subsubsection{Scheduling per brevità} Chiamato anche \textbf{shortest-job-first} (o SFJ): la CPU viene assegnata in base a l processo che ha il successivo CPU burst più breve.
+\paragraph{Vantaggio}: minimizza il tempo di attesa medio (è \textbf{ottimale}).
+\paragraph{Svantaggio}: non esiste modo per sapere qual è il processo che avrà il CPU burst più breve! Visto che questo non è possibile nella pratica, si può solo "stimare".
+\\ \\ 
+inserisco il paragone tra FCFS  e SFJ
+\\ \\
+Come stimo il burst di un processo?
+\paragraph{Idea:} registrare la lunghezza dei CPU burst precedenti ed applicare una \textbf{media esponenziale}:
+\begin{enumerate}
+	\item $t_n$ = durata effettiva dell'n-esimo burst.
+	\item Sia $\alpha$ un valore compreso tra 0 e 1.
+	\item Sia $T_{k+1} = \alpha t_k + (1 - \alpha ) T_k$
+	\item La media esponenziale è data da $T_{n+1 }$
+\end{enumerate}
+La versione preemptive è chiamata \textbf{shortest-remaining-time-first}.
+Il parametro $\alpha$ "bilancia" il peso della storia recente vs. storia passata (di solito si usa $T = 0.5$).
+Se $\alpha = 0$, la storia non conta, torna il FCFS
+Se $\alpha = 1$, conta solo la durata dell'ultimo burst.
+\\ \\
+Con il shortest-remainig-time-first abbiamo che il tempo di attesa medio di un processo è:
+\begin{equation}
+istante \medspace terminazione  \medspace processo - (tempo \medspace di \medspace arrivo  + durata \medspace burst)
+\end{equation}
+\\ \\
+ci ficco la foto delle slide
+\\ \\
+
+\subsubsection{Scheduling circolare}
+In uno scheduling circolare, o \textbf{round-robin} (RR) abbiamo che:
+\begin{itemize}
+	\item Ogni processo ottiene una piccola quantità fissata di tempo di CPU
+	\item trascorso tale tempo il processo viene interrotto e messo in fondo alla ready queue
+	\item la ready queue è trattata come un buffer circolare
+\end{itemize}
+Se ci sono $n$ processi nella ready queue e il quanto temporale è $q$, allora ogni processo ottiene 1/n di tempo di CPU e nessun processo attende più di q*(n-1) unità di tempo nella ready queue.
+Per effettuare la prelazione del processo corrente si effettua un interrupt del timer ogni q di tempo.
+\\ \\
+foto dello scheduling circolare
+\\ \\
+
+
+\textbf{Confronto tra algoritmi di scheduling}
+\begin{figure}[H]
+\includegraphics[scale=8]{scheduling-vs.jpg}
+\centering
+\end{figure}
 
 \end{document}
